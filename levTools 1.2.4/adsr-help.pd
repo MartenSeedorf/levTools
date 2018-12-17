@@ -1,0 +1,30 @@
+#N canvas 311 88 801 366 10;
+#X obj -2 0 cnv 15 800 45 empty \$0-pddp.cnv.header adsr 3 12 0 18
+-204280 -1 0;
+#X obj 16 300 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 10 25 Lautstärkehüllkurve, f 116;
+#X obj 487 63 adsr 1;
+#X text 18 55 EINGANG 1: Audiosignal \, das verarbeitet werden soll
+;
+#X text 18 89 EINGANG 2: Die Lautstärkehüllkurve wird ausgelöst
+(z.B. von [taste] \, [banger] \, [pad] \, etc.);
+#X text 16 144 EINGANG 3: Steuert den Regler 'Attack' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 179 EINGANG 4: Steuert den Regler 'Decay' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 216 EINGANG 5: Steuert den Regler 'Sustain' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 252 EINGANG 6: Steuert den Regler 'Release/Decay' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 17 323 AUSGANG 1: Gibt das mit Lautstärkehüllkurve versehene
+Schwingung als Audiosignal aus.;
+#X text 412 322 Empfängt das Modul dann einen Steuerbefehl \, so führt
+es eine Lautstärkebewegung entlang der eingestellten Werte aus.;
+#X text 410 191 [adsr] erzeugt eine Lautstärkehüllkuve.;
+#X text 412 217 Wird an den linken Eingang von [adsr] ein Audiosignal
+angeschlossen \, so kann dieses in seinem Lautstärkeverlauf manipuliert
+werden. Dafür müssen an den 2.Eingang entweder Steuerdaten zur Lautstärke
+beim Auslösen eines Klangs (z.B. von [midiinput] oder [sequenzer])
+\, oder Steuerdaten \, die einzelne Ereignisse auslösen (z.B. von
+[banger] \, [steps] oder [taste]) angeschlossen werden.;

@@ -1,0 +1,46 @@
+#N canvas 521 18 801 673 10;
+#X obj -2 0 cnv 15 800 45 empty \$0-pddp.cnv.header grin 3 12 0 18
+-204280 -1 0;
+#X obj 16 546 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X obj 420 61 grin 1;
+#X text 10 25 granulare Klänge, f 116;
+#X text 421 555 An den ersten Eingang links kann [midiinput] \, [sequenzer]
+oder [loopmidi] angeschlossen werden \, damit Steuerdaten zur Tonhöhe
+empfangen werden. Am zweiten Eingang kann ein Audiosignal angeschlossen
+werden \, dass dann aufgenommen werden kann. Über die anderen Eingänge
+werden die Schalter und Regler angesteuert. Das Modul gibt bei Tastendruck
+das tonal gestimmte Sample aus.;
+#X text 421 392 [grin] ist ein granularer Sampler \, der mit einer
+Klaviatur tonal in 4 Stimmen gespielt werden kann. Der Sampler kann
+einen Sound von der Festplatte laden oder vom zweiten Eingang aufnehmen
+und diese Aufnahmen dann auf der Festplatte speichern. Aus dem Sample
+wird dann ein sogenanntes 'grain' ausgeschnitten mit dem Positionsregler
+und dem Längeregler. Dieses wird dann zur Klangerzeugung genutzt.
+Mit dem Tune-Regler kann das Instrument gestimmt werden \, damit es
+harmonisch mit anderen gestimmten Instrumenten klingt. Schließlich
+kann die Hüllkurve des erzeugten Klangs eingestellt werden.;
+#X text 18 59 EINGANG 1: Töne (z.B. von [midiinput] \, [sequenzer]
+\, etc.);
+#X text 18 136 EINGANG 3: Steuert den Regler 'speedspread' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 171 EINGANG 4: Steuert den Regler 'scatter' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 92 EINGANG 2: Signal \, das mit 'Aufnahme' aufgenommen werden
+soll (z.B. von [input] \, [osci] \, etc.);
+#X text 18 217 EINGANG 5: Steuert den Regler 'Attack' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 252 EINGANG 6: Steuert den Regler 'Release' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 304 EINGANG 7: Steuert den Regler 'Position' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 339 EINGANG 8: Steuert den Regler 'Länge' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 374 EINGANG 9: Steuert den Regler 'Bewegung' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 19 414 EINGANG 10: Der Schalter 'Richtung' wird ausgelöst
+(0= Vorwärts \, 1=Vor-und Zurück \, z.B. von [taste] \, [banger]
+\, [pad] \, etc.);
+#X text 20 482 EINGANG 11: Steuert den Regler 'tune' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 21 567 AUSGANG 1: Gibt die erzeugten Klänge aus.;

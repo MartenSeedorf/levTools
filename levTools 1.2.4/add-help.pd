@@ -1,0 +1,55 @@
+#N canvas 311 88 801 621 10;
+#X obj -2 0 cnv 15 800 45 empty \$0-pddp.cnv.header add 3 12 0 18 -204280
+-1 0;
+#X obj 16 533 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 18 55 EINGANG 1: Tonhöhe in Hz (z.B. von [midiinput] \, [sequenzer]
+\, etc.);
+#X text 17 89 EINGANG 2: Der Schalter 'Ton' wird ausgelöst (z.B. von
+[taste] \, [banger] \, [pad] \, etc.);
+#X text 16 126 EINGANG 3: Steuert den Regler 'Frequenz' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 17 556 AUSGANG 1: Gibt die erzeugte Schwingung als Audiosignal
+aus.;
+#X obj 420 64 add;
+#X text 16 176 EINGANG 4/5: Steuert Position/Lautstärke des 1.Obertons
+(in Mididaten \, z.B. von [modu] \, [modurand] \, [control] \, etc.)
+;
+#X text 17 211 EINGANG 6/7: Steuert Position/Lautstärke des 2.Obertons
+(in Mididaten \, z.B. von [modu] \, [modurand] \, [control] \, etc.)
+;
+#X text 17 246 EINGANG 8/9: Steuert Position/Lautstärke des 3.Obertons
+(in Mididaten \, z.B. von [modu] \, [modurand] \, [control] \, etc.)
+;
+#X text 17 281 EINGANG 10/11: Steuert Position/Lautstärke des 4.Obertons
+(in Mididaten \, z.B. von [modu] \, [modurand] \, [control] \, etc.)
+;
+#X text 17 316 EINGANG 12/13: Steuert Position/Lautstärke des 5.Obertons
+(in Mididaten \, z.B. von [modu] \, [modurand] \, [control] \, etc.)
+;
+#X text 16 364 EINGANG 14: Steuert den Regler 'Attack' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 398 EINGANG 15: Steuert den Regler 'Sustain' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 417 551 Auch ohne eingehende Steuerdaten kann ein Ton ausgelöst
+und in seiner Tonhöhe verändert werden. Schließlich kann dieser
+Ton gegen andere Klänge verstimmt werden und in seiner Lautstärkehüllkurve
+bearbeitet werden.;
+#X text 419 348 Das Modul erzeugt seine Klänge mit sogenannter 'additiver
+Synthese'. Es baut aus einzelnen Sinusschwingungen neue Klänge zusammen
+\, wobei 5 höhere Schwingungen (Obertöne) über einer Grundschwingung
+angeordnet werden. Sie bilden dann das Obertonspektrum.;
+#X text 416 486 [add] erzeugt ganz ähnlich wie [osci] Töne und muss
+genauso behandelt werden: Am linken Eingang empfängt es Steuerdaten
+für die Töne (z.B. von [midiinput] oder [sequenzer]). Links unten
+gibt es sein Audiosignal aus.;
+#X text 418 423 Die Position der Obertöne über der Grundschwingung
+(Es wird der Faktor angezeigt \, mit dem die Grundfrequenz multipliziert
+wird) und ihre Lautstärke bestimmen die Klangfarbe.;
+#X text 418 311 [add] ist ein Modul \, mit dem ähnlich wie mit [osci]
+\, [shape] \, usw. Töne erzeugt werden können.;
+#X text 10 25 Klänge aus additiver Synthese, f 116;
+#X text 16 433 EINGANG 16: Steuert den Regler 'Release/Decay' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 17 490 EINGANG 17: Steuert den Regler 'detune' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);

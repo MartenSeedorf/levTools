@@ -1,0 +1,22 @@
+#N canvas 557 145 799 332 10;
+#X obj -2 0 cnv 15 800 45 empty \$0-pddp.cnv.header midikeyboard 3
+12 0 18 -204280 -1 0;
+#X text 17 152 ACHTUNG!: Die Midicontroller-Hardware muss zuallererst
+in den Midi-Einstellungen von Pure Data als Eingabegerät eingerichtet
+werden.;
+#X text 413 171 Sollte an Klangerzeuger wie [osci] \, [add] \, [glocken]
+\, [grin] oder [keysa] angeschlossen werden. Mit [loopmidi] können
+Melodielinien aufgenommen und in einer Schleife abgespielt werden.
+;
+#X text 410 241 Mit der Funktion 'block pads' können die tiefen Tasten
+\, die typischerweise durch Pad-Controller angesteuert werden \, blockiert
+werden. So können in einem Patch sowohl Module über [pad] \, als
+auch Module über [midiinput] angesteuert werden \, ohne dass Zweitere
+durch die Pads ausgelöst werden.;
+#X text 10 25 Toninformationen von Midi-Klaviaturen, f 116;
+#X obj 523 59 midikeyboard;
+#X text 16 63 AUSGANG 1: Gibt die Steuerdaten von auf einer Midi-Klaviatur
+gespielten Tönen aus. Sollte an Klangerzeuger wie [osci] \, [add]
+\, [glocken] \, [grin] oder [keysa] angeschlossen werden.;
+#X text 414 118 Mit [midikeyboard] kann ein Midikeyboard angeschlossen
+und zum Spielen geeigneter Module verwendet werden.;
