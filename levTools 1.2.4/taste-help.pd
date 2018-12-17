@@ -1,0 +1,23 @@
+#N canvas 183 90 799 436 10;
+#X obj -2 0 cnv 15 800 45 empty \$0-pddp.cnv.header taste 3 12 0 18
+-204280 -1 0;
+#X obj 549 63 taste;
+#X text 10 25 Das Computerkeyboard als Controller, f 116;
+#X text 402 336 Das Modul muss an den Moduleingang \, der den gewünschten
+Schalter steuert \, angeschlossen werden. Dann wird einfach die zur
+Steuerung auserkorene Taste auf der Tastatur betätigt. DIREKT danach
+wird schließlich auf 'zuweisen' geklickt. Nun kann mit der gewählten
+Taste der Modulschalter gesteuert werden.;
+#X text 400 152 Mit [taste] können die Tasten der Computertastatur
+in das Patch eingebaut werden \, um Sounds auszulösen oder Prozesse
+zu steuern.;
+#X text 399 213 [taste] kann an Module wie [kick] \, [snare] \, [hihat]
+\, [sample] \, [simple] oder [adsr] angeschlossen werden \, um Sounds
+auszulösen. [taste] kann auch an alle an/aus-Schalter angeschlossen
+werden. Zum Beispiel kann eine Taste einem [steps]-sequenzer zugewiesen
+werden und diesen Starten bzw. Stoppen. Oder eine Taste könnte ein
+[volume]-Modul stumm und laut schalten.;
+#X text 18 72 AUSGANG 1: Gibt bei Drücken der ausgewählten Taste
+ein 'bang'-Signal aus \, das Prozesse oder Sound auslöst. Kann an
+Module wie [kick] \, [snare] \, [hihat] \, [sample] \, [simple] oder
+[adsr] angeschlossen werden.;

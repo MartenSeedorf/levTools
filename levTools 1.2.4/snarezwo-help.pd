@@ -1,0 +1,26 @@
+#N canvas 279 95 801 420 10;
+#X obj 0 0 cnv 15 800 45 empty \$0-pddp.cnv.header snarezwo 3 12 0
+18 -204280 -1 0;
+#X obj 15 290 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 16 109 EINGANG 2: Steuert den Regler 'tune' (in Mididaten \,
+z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 9 26 elektronische Snaredrum, f 116;
+#X text 16 65 EINGANG 1: Steuerdaten zum Auslösen der Snaredrum (z.B.
+von [steps] \, [sequenzer] \, [pad] \, oder [taste]);
+#X text 16 312 AUSGANG 1: Gibt das erzeugte Snaredrum-Signal aus.;
+#X obj 523 57 snarezwo;
+#X text 16 144 EINGANG 3: Steuert den Regler 'farbe' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 189 EINGANG 4: Steuert den Regler 'decay' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 233 EINGANG 5: Steuert den Regler 'sound' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 416 274 [snarezwo] erzeugte eine elektronische Snaredrum. Diese
+kann mit 'tune' in ihrer Tonhöhe gestimmt werden. 'farbe' regelt den
+anteil der hohen Frequenzen in der Snare. 'attack' und 'decay' steuern
+das Ein- und Ausschwingverhalten der Snaredrum.;
+#X text 416 353 Im Vergleich zu [snare] können mit [snarezwo] 'echtere'
+Snaresounds produziert werden. Andereseits können \, wenn sound kleiner
+als 0.5 eingestellt wird \, sehr künstliche Sounds gemacht werden.
+;
