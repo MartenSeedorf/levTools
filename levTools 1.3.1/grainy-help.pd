@@ -1,0 +1,31 @@
+#N canvas 105 158 801 523 10;
+#X obj 0 0 cnv 15 800 45 empty \$0-pddp.cnv.header grainy 3 12 0 18
+-204280 -1 0;
+#X obj 17 212 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 19 51 EINGANG 1: Audiosignal \, das verarbeitet werden soll.
+;
+#X text 19 87 EINGANG 2: Steuert den Regler 'Feedback' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X obj 471 58 grainy;
+#X text 10 25 granularer Pitcheffekt, f 116;
+#X text 17 233 AUSGANG 1: Gibt das mit bearbeitete Signal aus.;
+#X text 18 125 EINGANG 3: Steuert den Regler 'Width' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 169 EINGANG 4: Steuert den Regler 'Transposition' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 414 250 [grainy] ist ein granularer Effekt. Das eingehende
+Signal wird in Blöcke \, deren Größe von 'width' bestimmt werden
+\, aufgeteilt. Diese Blöcke können dann in ihrer Abspielgeschwindigkeit
+und also ihrer Tonhöhe mit dem Regler 'Transposition' verändert werden
+und werden dann wieder neu zusammengesetzt. So kann das Signal insgesamt
+in seiner Tonhöhe verändert werden. Der Regler 'Feedback' verändert
+dabei den Klangcharakter.;
+#X text 414 365 Damit das Transponieren (Veränderung der Tonhöhe)
+funktioniert \, muss die Fesntergröße in der Regel sehr hoch eingestellt
+sein. Das führt allerdings auch dazu \, dass das eingehende Signal
+verzögert wird \, da die großen Blöcke verarbeitet werden müssen.
+;
+#X text 414 444 [grainy] kann eingesetzt also werden \, um eine Signal
+gezielt in seiner Tonhöhe zu verändern. Es kann aber auch mit anderen
+Einstellungen verwendet werden \, um dass Signal zu verfremden.;

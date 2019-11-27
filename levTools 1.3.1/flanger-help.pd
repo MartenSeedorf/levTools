@@ -1,0 +1,30 @@
+#N canvas 448 195 800 459 10;
+#X obj 0 0 cnv 15 800 45 empty \$0-pddp.cnv.header flanger 3 12 0 18
+-204280 -1 0;
+#X obj 17 271 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 19 51 EINGANG 1: Audiosignal \, das verarbeitet werden soll.
+;
+#X text 21 301 AUSGANG 1: Gibt das verarbeitete Signal aus.;
+#X obj 542 57 flanger 1;
+#X text 19 90 EINGANG 2: Steuert den Regler 'int'= Intensität (in
+Mididaten \, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 19 133 EINGANG 3: Steuert den Regler 'depth' = Tiefe (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 19 173 EINGANG 4: Steuert den Regler 'speed' = Geschwindigkeit
+(in Mididaten \, z.B. von [modu] \, [modurand] \, [control] \, etc.)
+;
+#X text 19 214 EINGANG 5: Steuert den Regler 'shift' = Verschiebung
+(in Mididaten \, z.B. von [modu] \, [modurand] \, [control] \, etc.)
+;
+#X text 411 266 [flanger] ist ein Klangeffekt \, der häufig als synthetisch
+\, psychedelisch oder spacig beschrieben wird.;
+#X text 413 307 Beim Flanger wird das Eingangssignal zuerst kopiert.
+Die Kopie wird dann zeitlich verzögert und mit dem Original wieder
+zusammengeführt.;
+#X text 410 362 Die Zeitverzögerung (shift) wird mit einer bestimmten
+Geschwindigkeit (speed) laufend variiert \, wodurch sich kleine Schwankungen
+der Tonhöhe nach oben und unten ergeben. Durch die Überlagerung mit
+dem unveränderten Originalsignal ergeben sich Interferenzen (Kammfiltereffekt)
+\, die aufgrund der variierenden Zeitverzögerung „wandern“.;
+#X text 10 25 space is the place, f 116;

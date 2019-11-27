@@ -1,0 +1,61 @@
+#N canvas 117 24 1149 720 10;
+#X obj -2 0 cnv 15 1150 45 empty \$0-pddp.cnv.header beate 3 12 0 18
+-204280 -1 0;
+#X obj 12 403 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 16 55 EINGANG 1: Steuerdaten zum Tempo (von [clock] oder [levlink])
+;
+#X text 16 299 EINGANG 6: Der Schalter 'Neustart' wird ausgelöst (durch
+einen 'bang' \, z.B. von [taste] \, [banger] \, [pad] \, etc.).;
+#X text 10 25 Beats aufnehmen, f 116;
+#X obj 543 160 beate 1;
+#X text 16 104 EINGANG 2: Die Daten \, die aufgenommen werden sollen.
+(z.B. von [midiinput] \, [pad] \, [taste] \, [taste] \, [steps] \,
+etc.).;
+#X text 16 161 EINGANG 3: Aufnahme aktivieren/deaktivieren ('bang'
+oder '0/1' \, z.B. von [taste] \, [nummer] \, [steps] \, [banger] \,
+etc.);
+#X text 17 428 AUSGANG 1: Gibt die aufgenommene Sequenz als Steuerdaten
+aus.;
+#X text 16 209 EINGANG 4: 'Löschen' wird ausgelöst ('bang' \, z.B.
+von [taste] \, [banger] \, etc.);
+#X text 16 254 EINGANG 5: Steuert den Schalter 'Takte' (Nummern von
+1-4 \, z.B. von [nummer]).;
+#X text 16 346 EINGANG 7: 'Ausgabe' aktivieren/deaktivieren ('bang'
+oder '0/1' \, z.B. von [taste] \, [nummer] \, [steps] \, [banger] \,
+etc.);
+#X text 17 466 Kann an Klangerzeuger wie [kick] \, [snare] \, etc.
+angeschlossen werden.;
+#X text 758 134 An Eingang 1 müssen Steuerdaten zum Tempo von [clock]
+oder [levlink] angeschlossen werden. Die Steuerdaten für den Beat
+werden an Eingang 2 angeschlossen \, z.B. von [midiinput] \, [pad]
+\, [taste] \, [taste] \, [steps] \, etc..;
+#X text 758 372 Mit 'löschen' wird die gesamte Aufnahme gelöscht.
+;
+#X text 758 411 Wird 'Neustart' betätigt \, so startet [beate] am
+Anfang des nächsten Takts von Vorne.;
+#X text 758 457 Rechts oben kann ein Klick/Metronom aktiviert werden
+\, der während der Aufnahme hilft \, im Tempo zu bleiben.;
+#X text 758 246 Wenn 'Aufnahme' aktiviert wird \, beginnt [beate] am
+Anfang des nächsten Durchlauf der Sequenz die Aufnahme. Wenn die Aufnahme
+läuft \, ist das Modul rot. Eine zweite Aufnahme löscht nicht die
+erste Aufnahme \, sondern bereits vorhandene Aufnahme wird um die zweite
+ergänzt.;
+#X text 758 325 Nur wenn 'Ausgabe' aktiviert ist \, werden die aufgenommenen
+Beats ausgegeben.;
+#X obj 477 80 midiinput 1;
+#X obj 404 57 clock;
+#X obj 514 375 snare 1;
+#X obj 497 591 output 1;
+#X text 758 206 Dann wird die Länge der Beat-Sequenz von einem bis
+vier Takte ausgewählt \, die dann im Loop ablaufen.;
+#X text 758 514 [beate] muss an Klangerzeuger wie [kick] \, [snare]
+\, [hihat] \, [toms] \, [sampler] oder [simple] angeschlossen werden.
+;
+#X text 758 87 Mit [beate] können selbst gespielte Beats aufgenommen
+werden.;
+#X connect 5 0 21 0;
+#X connect 19 0 5 1;
+#X connect 20 0 5 0;
+#X connect 21 0 22 0;
+#X connect 21 0 22 1;

@@ -1,0 +1,41 @@
+#N canvas 439 111 801 548 10;
+#X obj -2 0 cnv 15 800 45 empty \$0-pddp.cnv.header looper 3 12 0 18
+-204280 -1 0;
+#X obj 14 327 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 11 26 Loops aufnehmen und abspielen, f 116;
+#X obj 422 54 looper;
+#X text 15 99 EINGANG 2: Signal \, das mit 'Aufnahme' aufgenommen werden
+soll (z.B. von [input] \, [osci] \, etc.);
+#X text 15 66 EINGANG 1: Kontrolldaten zum Tempo ([clock] oder [levlink])
+;
+#X text 16 141 EINGANG 3: Steuert den Schalter 'Ausgabe' (0=aus \,
+1=an \, bzw. bang für an/aus \, z.B. [taste] \, [banger] \, etc.).
+;
+#X text 16 187 EINGANG 4: Steuert den Schalter 'Aufnahme' (0=aus \,
+1=an \, bzw. bang für an/aus \, z.B. [taste] \, [banger] \, etc.).
+;
+#X text 16 231 EINGANG 5: Steuert den Schalter 'rückwärts' (0=aus
+\, 1=an \, bzw. bang für an/aus \, z.B. [taste] \, [banger] \, etc.).
+;
+#X text 15 351 AUSGANG 1: Gibt den erzeugten Loop aus.;
+#X text 421 247 [looper] ist Ein Loopgerät \, in dem ein Loop mit
+einer Länge bis zu vier Takten aufgenommen und dann in der Schleife
+abgespielt werden kann.;
+#X text 420 306 An den ersten Eingang links MUSS [clock] oder [levlink]
+angeschlossen werden \, damit Steuerdaten zum Tempo empfangen werden.
+Am zweiten Eingang kann ein Audiosignal angeschlossen werden \, dass
+dann aufgenommen werden kann. Über die anderen Eingänge werden die
+Schalter und Regler angesteuert. Das Modul gibt dann die Aufnahme im
+richtigen Tempo wieder aus.;
+#X text 420 416 Die Aufnahme kann außerdem rückwärts abgespielt
+werden.;
+#X text 420 448 Zu Aufnahmezwecken kann ein Klick ausgegeben werden.
+;
+#X text 418 475 Die aufgenommene Datei kann als Wave-Datei auf der
+Festplatte gespeichert werden. Außerdem können Loops geladen werden.
+Diese sollten allerdings das passende Tempo und die entsprechende Länge
+haben.;
+#X text 16 276 EINGANG 6: Steuert den Schalter 'Länge' (1 = 1 Takt
+\, 2 = 2 Takte \, 3 = 3 Takte \, 4 = 4 Takte \, z.B. von [nummer]).
+;

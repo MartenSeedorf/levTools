@@ -1,0 +1,34 @@
+#N canvas 343 113 801 549 10;
+#X obj 0 0 cnv 15 800 45 empty \$0-pddp.cnv.header levlink 3 12 0 18
+-204280 -1 0;
+#X obj 19 141 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X obj 535 57 levlink;
+#X text 8 26 Synchronisation: Ableton LINK für die lev Tools, f 116
+;
+#X text 410 401 Die beteiligten Geräte müssen im gleichen WLAN- oder
+LAN-Netzwerk sein. Dann muss nur noch auf verbinden geklickt werden
+und das Modul spuckt das Tempo aus \, in dem alle beteiligten Instrumente
+spielen. Wie das Modul [clock] kann es nun an alle Module ([Steps]
+\, [Sequenzer] \, [loopmidi] \, [looper] \, usw.) angeschlossen werden
+\, die in einem festgelegten Tempo funktionieren.;
+#X text 410 505 Für weitere Informationen siehe 1-Einfuehrung.pd unter
+'Netzwerk'.;
+#X text 409 225 [levlink] hat prinzipiell dieselbe Funktion wie [clocks].
+Es dient dazu \, tempoabhängige Module wie [steps] \, [sequenzer]
+\, [loopmidi] \, [looper] \, etc. im Tempo gleichzuschalten. Außerdem
+können auch Instrumente auf anderen Rechnern über ein W-LAN oder
+LAN Netzwerk miteinander verbunden werden.;
+#X text 410 305 LINK ist eine von der Firma Ableton entwickelte Software
+\, mit der Musiksoftware auf unterschiedlichen Geräten (Computer \,
+Smartphones \, Tablets \, etc.) miteinander verbunden werden kann \,
+damit die erzeugten Klänge im gleichen Tempo abgespielt werden können.
+Diesen Vorgang nennt man auch Synchronisation. [levlink] ermöglichet
+diese Verbindung.;
+#X text 16 55 EINGANG 1: Steuert den Regler 'Bpm' (in Mididaten \,
+z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 99 EINGANG 2: Steuert den Regler 'korrektur' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 17 163 AUSGANG 1: Gibt das Steuersignal zu Tempo aus. Sollte
+an Module wie [steps] \, [sequenzer] \, [loopmidi] \, [looper] \, etc.
+angeschlossen werden.;

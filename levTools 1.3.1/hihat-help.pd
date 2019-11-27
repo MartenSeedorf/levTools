@@ -1,0 +1,22 @@
+#N canvas 341 312 801 306 10;
+#X obj 0 0 cnv 15 800 45 empty \$0-pddp.cnv.header hihat 3 12 0 18
+-204280 -1 0;
+#X obj 17 256 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X obj 528 53 hihat 1;
+#X text 18 94 EINGANG 2: Steuert den Regler 'sound' (in Mididaten \,
+z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 50 EINGANG 1: Steuerdaten zum Auslösen der Hihat (z.B.
+von [steps] \, [sequenzer] \, [pad] \, oder [taste]);
+#X text 17 278 AUSGANG 1: Gibt das erzeugte Hihat-Signal aus.;
+#X text 18 129 EINGANG 3: Steuert den Regler 'noise' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 10 25 elektronische Perkussion, f 116;
+#X text 18 176 EINGANG 4: Steuert den Regler 'attack' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 211 EINGANG 5: Steuert den Regler 'decay' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 415 228 [hihat] erzeugt ein elektronisches Hihat. Über 'Sound'
+kann der Klang verändert werden. 'Noise' steuert die Lautstärke des
+Rauschens im Klang.'attack' und 'decay' steuern das Ein- und Ausschwingverhalten
+der Hihat.;

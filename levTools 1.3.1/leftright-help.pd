@@ -1,0 +1,18 @@
+#N canvas 244 114 785 290 10;
+#X obj -2 0 cnv 15 786 46 empty \$0-pddp.cnv.header leftright 3 12
+0 18 -204280 -1 0;
+#X obj 11 59 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 11 26 Steuerung von Reglern mit den Pfeiltasten (auch mit dem
+Makey Makey), f 116;
+#X text 412 158 Mit den Pfeiltasten können Steuerdaten im MIDIformat
+zwischen 0 und 127 eigestellt werden. Wird das Modul an einen passenden
+Moduleingang angeschlossen \, so bewegt es einen Regler.;
+#X obj 543 63 leftright 1;
+#X text 412 123 [leftright] wird zur Steuerung von Modulreglern über
+die Pfeiltasten (links/rechts) eingesetzt.;
+#X text 411 235 Das Modul kann auch mit dem MAKEY MAKEY (s. Hilfe-Patch
+von [makeymain]) genutzt werden \, mit dem der Tastendruck auf die
+Pfeiltasten gesteuert werden kann.;
+#X text 12 79 AUSGANG 1: Gibt Steuerdaten (Werte von 0 - 127) aus.
+Kann an alle Regler der levTools angeschlossen werden.;
