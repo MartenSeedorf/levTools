@@ -1,0 +1,96 @@
+#N canvas 0 24 1280 753 10;
+#X obj 86 -262 cnv 15 288 204 empty empty signal 206 11 0 20 -233017
+-1 0;
+#X obj 114 -230 cnv 15 200 140 empty empty empty 20 12 0 14 -262144
+-66577 0;
+#X obj 193 -491 inlet~;
+#X obj 191 -295 tabwrite~ \$0array1;
+#X obj 531 -535 loadbang;
+#X obj 267 -378 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 270 -352 metro 100;
+#X obj 335 -212 vsl 15 100 0 127 0 0 \$0midivol \$0midivol_r zoom-y
+-10 127 0 10 -99865 -260097 -1 1237 1;
+#X obj 324 -105 nbx 3 16 -1e+37 1e+37 0 0 \$0show_s \$0show empty 0
+-8 0 10 -262144 -1 -1 1 256 0;
+#X obj 208 -394 *~;
+#X obj 270 -411 line~;
+#X msg 270 -442 \$1 15;
+#X obj 277 -551 r \$0midivol;
+#X obj 324 -462 s \$0show;
+#X obj 335 -229 bng 15 250 50 0 \$0resetvolume \$0resetvolume_r 1 5
+6 0 8 -262144 -260097 -1;
+#X obj 566 -457 s \$0midivol_r;
+#X obj 588 -522 r \$0resetvolume;
+#X obj 258 -82 nbx 4 16 -1e+37 1e+37 0 0 \$0showzoom_s \$0showzoom
+empty 0 -8 0 10 -262144 -1 -1 441 256 0;
+#X obj 133 -82 bng 15 250 50 0 \$0resety \$0resety_r 1 5 7 0 8 -262144
+-260097 -1;
+#X obj 515 -441 \$0;
+#X msg 610 -355 \; \$1array1 yticks 0 0.1 5;
+#X obj 522 -476 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 791 -360 \; \$1array1 ylabel 0 -1 0 1;
+#X msg 732 -297 \; \$1array1 xticks 0 10 1;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0array1 441 float 4 black black;
+#X coords 0 1 440 -1 200 140 1;
+#X restore 114 -230 graph;
+#X obj 96 -169 cnv 15 7 15 empty empty 0 4 6 0 14 -233017 -66577 0
+;
+#X obj 87 -98 cnv 15 7 15 empty empty -1 4 6 0 14 -233017 -66577 0
+;
+#X obj 94 -238 cnv 15 7 15 empty empty 1 4 6 0 14 -233017 -66577 0
+;
+#X obj 268 -522 / 15.875;
+#X msg 570 -492 15.875;
+#X obj 538 -262 r \$0resety;
+#X msg 668 -130 \; \$1array1 resize \$2;
+#X floatatom 659 -240 5 0 0 0 - - -, f 5;
+#X obj 472 -292 r \$0zoom;
+#X obj 662 -212 t b f;
+#X obj 661 -187 \$0;
+#X obj 657 -163 pack f f;
+#X obj 531 -193 s \$0zoom_r;
+#X obj 467 -147 * 441;
+#X obj 462 -85 s \$0showzoom;
+#X obj 471 -258 / 12.7;
+#X msg 538 -230 12.7;
+#X obj 164 -346 clip~ -1 1;
+#X obj 151 -82 hsl 100 15 1.27 127 1 0 \$0zoom \$0zoom_r zoom-x 37
+5 0 10 -99865 -260097 -262144 4950 1;
+#X obj 2 -170 outlet~;
+#X obj 683 -436 s \$0zoom_r;
+#X msg 681 -472 12.7;
+#X connect 2 0 9 0;
+#X connect 2 0 44 0;
+#X connect 4 0 5 0;
+#X connect 4 0 29 0;
+#X connect 4 0 19 0;
+#X connect 4 0 46 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 9 0 42 0;
+#X connect 10 0 9 1;
+#X connect 11 0 10 0;
+#X connect 12 0 28 0;
+#X connect 16 0 29 0;
+#X connect 19 0 20 0;
+#X connect 21 0 19 0;
+#X connect 28 0 13 0;
+#X connect 28 0 11 0;
+#X connect 29 0 15 0;
+#X connect 30 0 41 0;
+#X connect 32 0 34 0;
+#X connect 33 0 40 0;
+#X connect 34 0 35 0;
+#X connect 34 1 36 1;
+#X connect 35 0 36 0;
+#X connect 36 0 31 0;
+#X connect 38 0 32 0;
+#X connect 38 0 39 0;
+#X connect 40 0 38 0;
+#X connect 41 0 37 0;
+#X connect 42 0 3 0;
+#X connect 46 0 45 0;
+#X coords 0 -1 1 1 290 210 1 85 -265;
