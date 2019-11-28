@@ -1,0 +1,433 @@
+#N canvas 0 24 1280 753 10;
+#X obj 105 537 meyer;
+#X obj -829 -3 cnv 15 3400 63 empty \$0-pddp.cnv.header meyer 3 12
+0 18 -260097 -1 0;
+#X text -787 23 an experimental sequencer, f 116;
+#X text -782 116 !!! ZOOM IN & OUT FOR BETTER NAVIGATION !!!;
+#X text -519 254 A random Sequence generator;
+#X text -519 281 Parameters can be set to unusual extreme values;
+#X text -519 338 32 Steps \, adjustable length of sequence;
+#X text -519 311 Sequences can automatically mutate over time;
+#X text -519 370 Monophonic/Polyphonic tonal/chromatic output;
+#X text -519 398 Random deviations in pitch and velocity;
+#X text -541 192 Meyer is an experimental sequencer. While delivering
+the usual tried and true functions \, it features several interesting
+and even some unique qualities:;
+#X text -520 426 random note output;
+#X obj 108 443 cnv 1 1 90 empty empty connect -10 -9 0 9 -260097 -1
+0;
+#N canvas 438 221 450 300 clock 0;
+#X obj 139 -290 f;
+#X obj 174 -289 + 1;
+#X obj 141 -338 metro;
+#X obj 216 -528 r \$0bpm;
+#X msg 217 -402 60000;
+#X obj 217 -381 /;
+#X obj 217 -429 t b f;
+#X obj 136 -400 loadbang;
+#X obj 137 -366 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 282 -338 f;
+#X obj 283 -387 sel 0;
+#X obj 214 -451 int;
+#X obj 121 -427 s \$0bpm_show;
+#X obj 216 -479 + 11;
+#X obj 216 -501 * 7.6;
+#X obj 341 -477 loadbang;
+#X obj 348 -422 s \$0bpm_r;
+#X msg 338 -447 14.4;
+#X obj 160 -64 outlet;
+#X msg 164 -95 Pulse \$1;
+#X msg 243 -107 BPM \$1;
+#X obj 139 -262 % 32;
+#X obj 217 -354 / 8;
+#X obj 139 -234 select 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30;
+#X floatatom 169 -144 5 0 0 0 - - -, f 5;
+#X msg 57 -197 0;
+#X msg 85 -196 1;
+#X msg 113 -196 2;
+#X msg 141 -195 3;
+#X msg 173 -195 4;
+#X msg 201 -194 5;
+#X msg 229 -194 6;
+#X msg 258 -192 7;
+#X msg 287 -193 8;
+#X msg 315 -192 9;
+#X msg 343 -193 10;
+#X msg 371 -191 11;
+#X msg 403 -191 12;
+#X msg 431 -190 13;
+#X msg 459 -190 14;
+#X msg 488 -189 15;
+#X msg 85 -97 Phase \$1;
+#X connect 0 0 1 0;
+#X connect 0 0 21 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 3 0 14 0;
+#X connect 4 0 5 0;
+#X connect 5 0 22 0;
+#X connect 6 0 4 0;
+#X connect 6 1 5 1;
+#X connect 7 0 8 0;
+#X connect 8 0 2 0;
+#X connect 9 0 20 0;
+#X connect 10 0 9 0;
+#X connect 11 0 6 0;
+#X connect 11 0 12 0;
+#X connect 11 0 9 1;
+#X connect 13 0 11 0;
+#X connect 14 0 13 0;
+#X connect 15 0 17 0;
+#X connect 17 0 16 0;
+#X connect 19 0 18 0;
+#X connect 20 0 18 0;
+#X connect 21 0 23 0;
+#X connect 21 0 41 0;
+#X connect 21 0 10 0;
+#X connect 22 0 2 1;
+#X connect 23 0 25 0;
+#X connect 23 1 26 0;
+#X connect 23 2 27 0;
+#X connect 23 3 28 0;
+#X connect 23 4 29 0;
+#X connect 23 5 30 0;
+#X connect 23 6 31 0;
+#X connect 23 7 32 0;
+#X connect 23 8 33 0;
+#X connect 23 9 34 0;
+#X connect 23 10 35 0;
+#X connect 23 11 36 0;
+#X connect 23 12 37 0;
+#X connect 23 13 38 0;
+#X connect 23 14 39 0;
+#X connect 23 15 40 0;
+#X connect 24 0 19 0;
+#X connect 25 0 24 0;
+#X connect 26 0 24 0;
+#X connect 27 0 24 0;
+#X connect 28 0 24 0;
+#X connect 29 0 24 0;
+#X connect 30 0 24 0;
+#X connect 31 0 24 0;
+#X connect 32 0 24 0;
+#X connect 33 0 24 0;
+#X connect 34 0 24 0;
+#X connect 35 0 24 0;
+#X connect 36 0 24 0;
+#X connect 37 0 24 0;
+#X connect 38 0 24 0;
+#X connect 39 0 24 0;
+#X connect 40 0 24 0;
+#X connect 41 0 18 0;
+#X restore 370 488 pd clock;
+#X obj 157 413 cnv 1 1 120 empty empty run -7 -8 0 9 -260097 -1 0;
+#X text 162 415 Control the run button with bangs or numbers 0/1.;
+#X obj 206 374 cnv 1 1 160 empty empty load\ SEQ -7 -8 0 9 -260097
+-1 0;
+#X obj 256 344 cnv 1 1 190 empty empty restart -7 -8 0 9 -260097 -1
+0;
+#X obj 304 294 cnv 1 1 240 empty empty start\ @\ 0 -7 -8 0 9 -260097
+-1 0;
+#X text 259 345 Restart meyer with a bang.;
+#X obj 354 254 cnv 1 1 280 empty empty tempo -7 -8 0 9 -260097 -1 0
+;
+#X obj 404 213 cnv 1 1 320 empty empty value -7 -8 0 9 -260097 -1 0
+;
+#X text 210 376 Load a sequence by sending numbers from 1 - 8;
+#X text 406 215 Control the global notelength with numbers from 0 -
+8;
+#X text 358 256 Control the tempo with numbers from 0 to 127 (MIDI).
+;
+#X obj 453 173 cnv 1 1 360 empty empty steps -7 -8 0 9 -260097 -1 0
+;
+#X obj 502 483 cnv 1 1 50 empty empty random -10 -9 0 9 -260097 -1
+0;
+#X text 455 174 Control the length of the sequence with numbers from
+0 to 127 (MIDI).;
+#X obj 552 444 cnv 1 1 90 empty empty run -7 -8 0 9 -260097 -1 0;
+#X text 558 446 Control the global note duration with numbers from
+0 to 127 (MIDI).;
+#X obj 601 414 cnv 1 1 120 empty empty triplet -7 -8 0 9 -260097 -1
+0;
+#X text 605 416 Control the triplet button with bangs or numbers 0/1.
+;
+#X obj 650 384 cnv 1 1 150 empty empty polyphony:\ notes -7 -8 0 9
+-260097 -1 0;
+#X text 308 297 If you start meyer \, it starts from the very beginning
+of the sequence at zero. Control with bangs or numbers 0/1.;
+#X text 656 388 How many notes at output? Control with numbers from
+1 - 4;
+#X obj 1393 651 cnv 1 150 1 empty empty polyphony 106 -8 0 9 -260097
+-1 0;
+#X obj 700 344 cnv 1 1 190 empty empty polyphony:\ random -7 -8 0 9
+-260097 -1 0;
+#X text 704 347 Control the random button with bangs or numbers 0/1.
+;
+#X text 1557 640 Meyer can ouput up to 4 Notes at the same time. If
+two or more notes are activated \, the 'Length-Sequence' controls which
+steps are used for polyphonic output. 'Length Sequence' controls the
+distance of the polyphonic notes on the grid.;
+#X text 1559 761 If RANDOM is activated \, polyphonic notes 2 \, 3
+and 4 are put out in random order.;
+#X text 1584 717 An example: If you choose to put out 4 Notes and the
+length of the sequence is 8 \, then every row is one voice.;
+#X obj 749 304 cnv 1 1 230 empty empty generator:\ generate -7 -8 0
+9 -260097 -1 0;
+#X text 753 307 Generate a random sequence with a bang.;
+#X obj 798 254 cnv 1 1 280 empty empty generator:\ pitch -7 -8 0 9
+-260097 -1 0;
+#X obj 848 204 cnv 1 1 330 empty empty generator:\ pitch -7 -8 0 9
+-260097 -1 0;
+#X text 802 256 Control the central pitch of the generated sequence
+with numbers from 0 to 127 (MIDI).;
+#X text 852 206 Control the pitch range of the generated sequence with
+numbers from 0 to 127 (MIDI).;
+#X obj 897 144 cnv 1 1 390 empty empty mutation:\ range -7 -8 0 9 -260097
+-1 0;
+#X text 899 145 Control the pitch range of the mutation with numbers
+from 0 to 127 (MIDI).;
+#X obj 1419 803 cnv 1 650 1 empty empty sequence\ generator 567 -8
+0 9 -260097 -1 0;
+#X obj 946 483 cnv 1 1 50 empty empty mutation:\ direction -10 -9 0
+9 -260097 -1 0;
+#X text 951 484 Control the direction of the mutation with numbers
+1 \, 2 and 3;
+#X text 507 484 Control the random function that randomizes the order
+of the steps. Use Numbers 1/0 or bangs.;
+#X obj 996 434 cnv 1 1 100 empty empty mutation:\ permanent -7 -8 0
+9 -260097 -1 0;
+#X text 1001 436 Are the changes caused by the mutation permanent or
+only temporary? Use bangs or numbers 0/1.;
+#X obj 1045 384 cnv 1 1 150 empty empty mutation:\ pitch -7 -8 0 9
+-260097 -1 0;
+#X obj 1094 334 cnv 1 1 200 empty empty mutation:\ volume -7 -8 0 9
+-260097 -1 0;
+#X text 1049 386 Does the mutation affect the pitch? Use bangs or numbers
+0/1.;
+#X text 1100 338 Does the mutation affect the volume? Use bangs or
+numbers 0/1.;
+#X obj 1144 284 cnv 1 1 250 empty empty mutation:\ distribute -7 -8
+0 9 -260097 -1 0;
+#X text 1148 287 Control the distribution of the changes caused by
+the mutation. Use numbers from 0 to 127 (MIDI).;
+#X obj 1193 244 cnv 1 1 290 empty empty tonality -7 -8 0 9 -260097
+-1 0;
+#X text 1198 246 Chromatic or tonal output? Use Numbers 1 and 2;
+#X obj 1242 204 cnv 1 1 330 empty empty tonality:\ key -7 -8 0 9 -260097
+-1 0;
+#X text 1247 206 Set the key of the output. Use numbers from 0 to 127
+(MIDI).;
+#X obj 1292 154 cnv 1 1 380 empty empty tonality:\ gender -7 -8 0 9
+-260097 -1 0;
+#X text 1294 155 Is the tonal output major or minor? Control with numbers
+1 and 2;
+#X obj 1341 483 cnv 1 1 50 empty empty limit:\ low -10 -9 0 9 -260097
+-1 0;
+#X obj 1390 443 cnv 1 1 90 empty empty limit:\ high -10 -9 0 9 -260097
+-1 0;
+#X text 1346 484 Control the lower limit of the pitch at output. Use
+numbers from 0 to 127 (MIDI).;
+#X text 1395 444 Control the upper limit of the pitch at output. Use
+numbers from 0 to 127 (MIDI).;
+#X obj 1440 383 cnv 1 1 150 empty empty connect -7 -8 0 9 -260097 -1
+0;
+#X text 1444 385 Should meyer sync to an external clock? Use bangs
+or numbers 1/0.;
+#X obj 1392 897 cnv 1 150 1 empty empty mutation 106 -8 0 9 -260097
+-1 0;
+#X text 1555 888 Meyer can mutate \, i.e. automatically change its
+sequences.;
+#X text 1554 914 You have to set the probability of mutation at every
+single step! Use the sliders to the left of the control grids. If a
+slider is set to full \, the step will be affected everytime. If the
+slider is set to 0 \, the step will never change.;
+#X text 1554 1077 The DISTRIBUTION controls the character of the changes:
+If the slider is set to the left \, more values (pitch/volume jumps)
+will occur. If the slider is set to the right \, smaller changes have
+a higher probability.;
+#X text 1554 1051 The deviations can go UP and/or DOWN.;
+#X text 1554 1012 You can set the RANGE of the deviations caused by
+the mutation (range).;
+#X text 1554 983 The mutation can affect PITCH and/or VOLUME .;
+#X text 2094 795 Generate a random sequence! You can set a central
+PITCH and the pitch RANGE of the random sequences.;
+#X text 1552 1147 If PERMANENT is activated \, the changes caused by
+the mutation will stay. Otherwise \, they will be temporary \, that
+means that the step will be set back to its original parameters after
+being changed.;
+#X obj 1405 1138 cnv 1 650 1 empty empty tonality 614 -8 0 9 -260097
+-1 0;
+#X text 2070 1200 The changes in pitch happen only at the output! They
+can not be seen in the grids which control pitch and volume of every
+step!;
+#X text 2070 1130 Meyer's output can be CHROMATIC or TONAL. Chromatic
+means \, that you can play all twelve notes in an octave. Tonal means
+\, that the notes of the sequence are forced into a given key.;
+#X text 2071 1256 You can set the KEY and the gender (MINOR/MAJOR)
+of the tonal output.;
+#X obj 1421 1300 cnv 1 150 1 empty empty limit 132 -7 0 9 -260097 -1
+0;
+#X text 1590 1288 Set pitch limits for Meyer's output. The notes can't
+get below the LOWer Limit or HIGHer than the upper limit.;
+#X obj 1290 1325 cnv 1 1 90 empty empty output -15 94 0 9 -260097 -1
+0;
+#X text 1317 1414 Meyer can output notes in MIDI format (midipitch
+and velocity - pairs) or in the levTools-format (frequency and velocity
+- pairs).;
+#X obj 709 1370 cnv 1 739 1 empty empty empty 614 -8 0 9 -260097 -1
+0;
+#X obj 143 1370 cnv 1 361 1 empty empty empty 614 -8 0 9 -260097 -1
+0;
+#X text 512 1364 Every step has it's own output!;
+#X text 450 1394 The output on the left corner is the main one for
+the whole sequence! If you only want to use one step \, use the other
+outputs.;
+#X obj 19 798 cnv 1 150 1 empty empty grid -4 -10 0 9 -260097 -1 0
+;
+#X text -346 791 Each step is controlled by a grid. You can set the
+pitch on the x-axis and the volume of the note on the y-axis.;
+#X obj -17 727 cnv 1 150 1 empty empty individual\ notelength -4 -10
+0 9 -260097 -1 0;
+#X obj -90 846 cnv 1 340 1 empty empty individual\ probability\ of\ mutation
+-4 -10 0 9 -260097 -1 0;
+#X text -423 839 These sliders control the probablity that the mutation
+affects the single steps.;
+#X text -355 720 This slider sets the individual notelength of each
+step relative to the global notelength (NOTE DURATION). If it is set
+to the right \, the note takes up the full global note duration.;
+#X obj -461 663 cnv 1 746 1 empty empty main\ controls -4 -10 0 9 -260097
+-1 0;
+#X text -821 656 You can start/stop the sequencer (RUN) and RESTART
+(set it back to the first step) it.;
+#X obj -115 547 cnv 1 233 1 empty empty connect -4 -10 0 9 -260097
+-1 0;
+#X text 113 444 Sending a bang in here causes a single step forward.
+For extern sync meyer needs sync-messages like [Phase 0 (1 ...31)]
+and [BPM 120 (or whatever)]. Use the module [clock] from the levTools
+or check out this code:;
+#X text -425 540 CONNECT syncs Meyer to an external clock. Activate
+STARTATZERO and meyer will always start at the beginning the bar given
+by the clock.;
+#X text -426 589 For extern sync meyer needs sync-messages like [Phase
+0 (1 ...31)] and [BPM 120 (or whatever)]. Use the module [clock] from
+the levTools or check out this code:;
+#N canvas 438 221 450 300 clock 0;
+#X obj 139 -290 f;
+#X obj 174 -289 + 1;
+#X obj 141 -338 metro;
+#X obj 216 -528 r \$0bpm;
+#X msg 217 -402 60000;
+#X obj 217 -381 /;
+#X obj 217 -429 t b f;
+#X obj 136 -400 loadbang;
+#X obj 137 -366 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 282 -338 f;
+#X obj 283 -387 sel 0;
+#X obj 214 -451 int;
+#X obj 121 -427 s \$0bpm_show;
+#X obj 216 -479 + 11;
+#X obj 216 -501 * 7.6;
+#X obj 341 -477 loadbang;
+#X obj 348 -422 s \$0bpm_r;
+#X msg 338 -447 14.4;
+#X obj 160 -64 outlet;
+#X msg 164 -95 Pulse \$1;
+#X msg 243 -107 BPM \$1;
+#X obj 139 -262 % 32;
+#X obj 217 -354 / 8;
+#X obj 139 -234 select 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30;
+#X floatatom 169 -144 5 0 0 0 - - -, f 5;
+#X msg 57 -197 0;
+#X msg 85 -196 1;
+#X msg 113 -196 2;
+#X msg 141 -195 3;
+#X msg 173 -195 4;
+#X msg 201 -194 5;
+#X msg 229 -194 6;
+#X msg 258 -192 7;
+#X msg 287 -193 8;
+#X msg 315 -192 9;
+#X msg 343 -193 10;
+#X msg 371 -191 11;
+#X msg 403 -191 12;
+#X msg 431 -190 13;
+#X msg 459 -190 14;
+#X msg 488 -189 15;
+#X msg 85 -97 Phase \$1;
+#X connect 0 0 1 0;
+#X connect 0 0 21 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 3 0 14 0;
+#X connect 4 0 5 0;
+#X connect 5 0 22 0;
+#X connect 6 0 4 0;
+#X connect 6 1 5 1;
+#X connect 7 0 8 0;
+#X connect 8 0 2 0;
+#X connect 9 0 20 0;
+#X connect 10 0 9 0;
+#X connect 11 0 6 0;
+#X connect 11 0 12 0;
+#X connect 11 0 9 1;
+#X connect 13 0 11 0;
+#X connect 14 0 13 0;
+#X connect 15 0 17 0;
+#X connect 17 0 16 0;
+#X connect 19 0 18 0;
+#X connect 20 0 18 0;
+#X connect 21 0 23 0;
+#X connect 21 0 41 0;
+#X connect 21 0 10 0;
+#X connect 22 0 2 1;
+#X connect 23 0 25 0;
+#X connect 23 1 26 0;
+#X connect 23 2 27 0;
+#X connect 23 3 28 0;
+#X connect 23 4 29 0;
+#X connect 23 5 30 0;
+#X connect 23 6 31 0;
+#X connect 23 7 32 0;
+#X connect 23 8 33 0;
+#X connect 23 9 34 0;
+#X connect 23 10 35 0;
+#X connect 23 11 36 0;
+#X connect 23 12 37 0;
+#X connect 23 13 38 0;
+#X connect 23 14 39 0;
+#X connect 23 15 40 0;
+#X connect 24 0 19 0;
+#X connect 25 0 24 0;
+#X connect 26 0 24 0;
+#X connect 27 0 24 0;
+#X connect 28 0 24 0;
+#X connect 29 0 24 0;
+#X connect 30 0 24 0;
+#X connect 31 0 24 0;
+#X connect 32 0 24 0;
+#X connect 33 0 24 0;
+#X connect 34 0 24 0;
+#X connect 35 0 24 0;
+#X connect 36 0 24 0;
+#X connect 37 0 24 0;
+#X connect 38 0 24 0;
+#X connect 39 0 24 0;
+#X connect 40 0 24 0;
+#X connect 41 0 18 0;
+#X restore -177 619 pd clock;
+#X text -817 693 You can set the TEMPO of the sequencer (deactivated
+if CONNECT is activated) and the global note value (8th \, 16th \,
+4th \, etc.) of the steps relative to this tempo. The NOTE DURATION
+sets the global length of the notes. An example: If you can have a
+note value of 8ths and a note duration of 4ths \, the played notes
+will overlap.;
+#X text -820 787 If you activate TRIPLET \, the notes are played as
+rhythmic triplets relative to the given tempo and note value. This
+only works \, if the sequencer is not connected to an external clock!
+;
+#X text -823 855 LENGTH SEQUENCE sets the length of the looped sequence.
+If you activate RANDOM \, the steps will be put out in random order.
+;
+#X text -786 88 This patchs explains all of Meyer's features.;

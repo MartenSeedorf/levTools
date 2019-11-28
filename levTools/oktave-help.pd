@@ -1,0 +1,19 @@
+#N canvas 183 90 799 260 10;
+#X obj -2 0 cnv 15 800 45 empty \$0-pddp.cnv.header oktave 3 12 0 18
+-204280 -1 0;
+#X obj 504 62 oktave 1;
+#X text 397 201 Links oben werden [midiinput] \, [sequenzer] \, [loopmidi]
+\, etc. angeschlossen. Links unten werden die transponierten Steuerdaten
+ausgegeben.;
+#X text 397 145 [oktave] erhält Steuerdaten zur Tonhöhe von [midiinput]
+\, [sequenzer] \, [loopmidi] \, etc. und transponiert den Ton dann
+in Oktavschritten hoch oder runter.;
+#X obj 15 157 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 17 60 EINGANG 1: Noteninformationen von [midiinput] \, [midikeyboard]
+\, etc.;
+#X text 10 25 Oktavierung von Noteninformationen, f 116;
+#X text 17 100 EINGANG 2: Steuert den Schalter oktave (0= -4 \, 1=
+-3 \, 2= -2 \, 3= -1 \, 4= 0 etc.);
+#X text 16 183 AUSGANG 1: Gibt die oktavierten Noteninformationen aus.
+;

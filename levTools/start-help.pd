@@ -1,0 +1,22 @@
+#N canvas 549 112 801 398 10;
+#X obj -2 0 cnv 15 800 45 empty \$0-pddp.cnv.header start 3 12 0 18
+-204280 -1 0;
+#X obj 10 120 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X obj 415 72 start 1;
+#X text 11 26 Prozesse starten, f 116;
+#X text 15 61 EINGANG 1: Aktiviert den Button 'start' (Bang \, z.b.
+von [taste] \, [banger] oder [steps] ODER Noten \, z.B. von [midiinput]
+\, [sequenzer] \, etc.);
+#X text 11 144 AUSGANG 1: Gibt einen Bang aus \, mit dem Prozesse ausgelöst
+werden können \, z.B. [linie].;
+#X text 401 329 In Kombination mit [wait] und [linie] können komplexe
+Abläufe erstellt werden \, die dann mit [start] ausgelöst werden.
+So kann ein ganzes Stück mit diesen drei Modulen strukuriert werden.
+;
+#X obj 568 79 wait 1;
+#X obj 595 173 linie 1;
+#X text 400 290 [start] wird eingesetzt \, um Prozesse auszulösen.
+Es kann z.B. eine [linie] auslösen \, um Parameter zu steuern.;
+#X connect 2 0 7 0;
+#X connect 7 0 8 0;

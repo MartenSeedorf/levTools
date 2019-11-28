@@ -1,0 +1,21 @@
+#N canvas 244 23 581 348 10;
+#X obj 0 0 cnv 15 580 45 empty \$0-pddp.cnv.header record 3 12 0 18
+-204280 -1 0;
+#X text 20 26 Aufnahmen, f 116;
+#X obj 439 70 record;
+#X obj 447 227 output 77;
+#X text 22 270 Sowohl im Input- als auch im Outputmodul sind CLIPPING-Anzeigen
+eingebaut. Wenn das Signal am Eingang oder Ausgang zu laut ist und
+deswegen übersteuert \, blinken diese Anzeigen rot.;
+#X text 21 70 Mit dem Modul [record] kann einfach alles aufgenommen
+werden \, was über einen oder auch mehrere [output]-Ausgänge auch
+zu hören ist. In jedem Output-Modul kann eingestellt werden \, ob
+der hier ausgegebene Sound mit aufgenommen werden soll \, oder nicht.
+;
+#X text 22 151 Immer \, wenn Record aktiviert wird \, öffnet sich
+ein Fenster \, in dem eingegeben werden kann \, wo und unter welchem
+Namen die Aufnahme (immer im wave-Format) gespeichert werden soll.
+;
+#X text 22 212 Nach einer Einstündigen Aufnahmezeit schaltet sich
+das Record Modul übrigens selbst ab. Ansonsten würde die Audiodatei
+geschrieben werden \, bis die Festplatte voll ist.;

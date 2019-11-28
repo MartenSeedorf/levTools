@@ -1,16 +1,16 @@
-#N canvas 0 0 1423 798 10;
+#N canvas 0 20 1423 798 10;
 #X obj 102 102 cnv 15 360 220 empty empty Add 10 200 0 30 -33289 -262144
 0;
 #X obj 346 244 vsl 15 50 0 127 0 0 \$0sus \$0sus_r Sustain -12 -9 0
 10 -162280 -260097 -262144 2450 1;
 #X obj 277 260 hsl 50 15 0 127 0 0 \$0att \$0att_r Attack 5 -8 0 10
--162280 -260097 -262144 4900 1;
+-162280 -260097 -262144 49 1;
 #X obj 278 277 nbx 4 14 -1e+037 1e+037 0 0 empty \$0attshow empty 0
--8 0 11 -99865 -260097 -260097 1016 256 0;
+-8 0 11 -99865 -260097 -260097 10.064 256 0;
 #X obj 383 261 hsl 50 15 0 127 0 0 \$0rel \$0rel_r Release/Decay -10
--8 0 10 -162280 -260097 -262144 4900 1;
+-8 0 10 -162280 -260097 -262144 49 1;
 #X obj 384 278 nbx 4 14 -1e+037 1e+037 0 0 empty \$0relshow empty 0
--8 0 11 -99865 -260097 -260097 1016 256 0;
+-8 0 11 -99865 -260097 -260097 10.064 256 0;
 #X obj 332 300 nbx 4 14 -1e+037 1e+037 0 0 empty \$0susshow empty 0
 -8 0 11 -99865 -260097 -260097 0.5 256 0;
 #X obj -196 -123 inlet;
@@ -44,7 +44,7 @@
 #X obj 1911 -337 loadbang;
 #X obj 1912 -281 \$1;
 #X obj 1911 -309 del 5;
-#X obj 1790 -219 del;
+#X obj 1786 -234 del;
 #X obj 362 -64 inlet;
 #X obj 678 156 inlet;
 #X obj 685 166 inlet;
@@ -320,9 +320,9 @@
 #X obj 195 126 vsl 20 60 0 127 0 0 \$0Add_OT0volctl \$0Add_OT0volctl_ctl
 empty -100 58 0 10 -191407 -260097 -1 5900 1;
 #X obj 236 163 vsl 15 60 0 127 0 0 \$0Add_OT1volctl \$0Add_OT1volctl_ctl
-empty -68 58 0 10 -191407 -260097 -1 2950 1;
+empty -68 58 0 10 -191407 -260097 -1 0 1;
 #X obj 282 163 vsl 15 60 0 127 0 0 \$0Add_OT2volctl \$0Add_OT2volctl_ctl
-empty -68 58 0 10 -191407 -260097 -1 1967 1;
+empty -68 58 0 10 -191407 -260097 -1 0 1;
 #X obj 143 124 vsl 15 70 0.127 127 0 0 \$0Freq \$0Freq_r Frequenz -30
 -9 0 12 -162280 -260097 -262144 3009 1;
 #X obj 105 198 nbx 5 14 -1e+037 1e+037 0 0 \$0freqshow_s \$0freqshow
@@ -338,9 +338,9 @@ OT2 10 8 0 10 -191407 -260097 -1 0 1;
 #X obj 313 146 nbx 4 14 -1e+037 1e+037 0 0 empty \$0Add_freq3 empty
 0 -8 0 9 -99865 -260097 -1 4 256 0;
 #X obj 327 163 vsl 15 60 0 127 0 0 \$0Add_OT3volctl \$0Add_OT3volctl_ctl
-empty -68 58 0 10 -191407 -260097 -1 1475 1;
+empty -68 58 0 10 -191407 -260097 -1 0 1;
 #X obj 372 163 vsl 15 60 0 127 0 0 \$0Add_OT4volctl \$0Add_OT4volctl_ctl
-empty -68 58 0 10 -191407 -260097 -1 1180 1;
+empty -68 58 0 10 -191407 -260097 -1 0 1;
 #X obj 316 130 hsl 35 15 0 127 0 0 \$0Add_OT3ctl \$0Add_OT3ctl_ctl
 OT3 10 8 0 10 -191407 -260097 -1 0 1;
 #X obj 358 146 nbx 4 14 -1e+037 1e+037 0 0 empty \$0Add_freq4 empty
@@ -348,7 +348,7 @@ OT3 10 8 0 10 -191407 -260097 -1 0 1;
 #X obj 361 130 hsl 35 15 0 127 0 0 \$0Add_OT4ctl \$0Add_OT4ctl_ctl
 OT4 10 8 0 10 -191407 -260097 -1 0 1;
 #X obj 417 163 vsl 15 60 0 127 0 0 \$0Add_OT5volctl \$0Add_OT5volctl_ctl
-empty -68 58 0 10 -191407 -260097 -1 983 1;
+empty -68 58 0 10 -191407 -260097 -1 0 1;
 #X obj 403 146 nbx 4 14 -1e+037 1e+037 0 0 empty \$0Add_freq5 empty
 0 -8 0 9 -99865 -260097 -1 6 256 0;
 #X obj 406 130 hsl 35 15 0 127 0 0 \$0Add_OT5ctl \$0Add_OT5ctl_ctl
@@ -1346,16 +1346,16 @@ OT5 10 8 0 10 -191407 -260097 -1 0 1;
 #X msg 1109 995 10;
 #X msg 996 976 127;
 #X obj 107 256 hsl 50 15 0 127 0 0 \$0glide \$0glide_r Glide 10 7 0
-10 -162280 -260097 -262144 4900 1;
+10 -162280 -260097 -262144 0 1;
 #X obj 642 100 inlet;
 #X obj 107 273 nbx 4 14 -1e+037 1e+037 0 0 \$0glideshow_s \$0glideshow
-empty 0 -8 0 11 -99865 -260097 -260097 1000 256 0;
+empty 0 -8 0 11 -99865 -260097 -260097 0 256 0;
 #X obj 553 254 r \$0glide;
 #X obj 554 279 / 1.27;
 #X obj 552 306 pow 1.5;
 #X obj 551 338 s \$0glideshow;
 #X obj 441 106 tgl 15 0 \$0monopoly \$0monopoly_r mono/poly -56 7 0
-10 -191407 -260097 -262144 0 1;
+10 -191407 -260097 -262144 1 1;
 #X obj -357 95 poly 1 1;
 #X obj -355 31 spigot;
 #X obj -296 38 spigot;
@@ -1379,6 +1379,7 @@ empty 0 -8 0 11 -99865 -260097 -260097 1000 256 0;
 #X obj 1442 -57 unpack f f f f f f f f f f f f f f f f f f;
 #X obj 1705 -8 s \$0monopoly_r;
 #X obj 1732 53 s \$0glide_r;
+#X obj 1832 -254 clip 1 110;
 #X connect 7 0 27 0;
 #X connect 7 0 255 0;
 #X connect 7 0 254 0;
@@ -1421,7 +1422,7 @@ empty 0 -8 0 11 -99865 -260097 -260097 1000 256 0;
 #X connect 34 0 36 0;
 #X connect 35 0 32 1;
 #X connect 35 0 33 1;
-#X connect 35 0 37 1;
+#X connect 35 0 276 0;
 #X connect 36 0 35 0;
 #X connect 37 0 32 0;
 #X connect 38 0 64 0;
@@ -1642,4 +1643,5 @@ empty 0 -8 0 11 -99865 -260097 -260097 1000 256 0;
 #X connect 273 15 117 0;
 #X connect 273 16 274 0;
 #X connect 273 17 275 0;
+#X connect 276 0 37 1;
 #X coords 0 -1 1 1 364 224 1 100 100;

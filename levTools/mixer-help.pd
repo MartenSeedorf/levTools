@@ -1,0 +1,58 @@
+#N canvas 87 89 1201 648 10;
+#X obj 0 0 cnv 15 1200 45 empty \$0-pddp.cnv.header mixer 3 12 0 18
+-204280 -1 0;
+#X obj 12 572 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 10 26 Audiomischpult mit 5 Kanälen, f 116;
+#X obj 812 59 mixer;
+#X text 9 54 EINGANG 1: Audiosignal 1;
+#X text 9 79 EINGANG 2: Steuert den Regler Lautstärke 1' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 9 119 EINGANG 3: Steuert den Regler 'Pan 1' (in Mididaten \,
+z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 9 157 EINGANG 4: Steuert den Schalter 'Kanal 1 an/aus' (0 =
+aus \, 1 = an \, z.B. von [nummer] \, r[numrand] oder bang = an/aus
+\, z.B. von [bange] \, [steps] \, [taste] \, etc.);
+#X text 10 221 EINGANG 5: Audiosignal 2;
+#X text 10 246 EINGANG 6: Steuert den Regler Lautstärke 2' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 10 288 EINGANG 7: Steuert den Regler 'Pan 2' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 10 326 EINGANG 8: Steuert den Schalter 'Kanal 2 an/aus' (0
+= aus \, 1 = an \, z.B. von [nummer] \, r[numrand] oder bang = an/aus
+\, z.B. von [bange] \, [steps] \, [taste] \, etc.);
+#X text 9 418 EINGANG 10: Steuert den Regler Lautstärke 3' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 10 393 EINGANG 9: Audiosignal 3;
+#X text 10 460 EINGANG 11: Steuert den Regler 'Pan 3' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 10 498 EINGANG 12: Steuert den Schalter 'Kanal 3 an/aus' (0
+= aus \, 1 = an \, z.B. von [nummer] \, r[numrand] oder bang = an/aus
+\, z.B. von [bange] \, [steps] \, [taste] \, etc.);
+#X obj 916 247 output 13;
+#X text 390 159 EINGANG 5: Audiosignal 4;
+#X text 391 183 EINGANG 6: Steuert den Regler Lautstärke 4' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 391 226 EINGANG 7: Steuert den Regler 'Pan 4' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 391 264 EINGANG 8: Steuert den Schalter 'Kanal 4 an/aus' (0
+= aus \, 1 = an \, z.B. von [nummer] \, r[numrand] oder bang = an/aus
+\, z.B. von [bange] \, [steps] \, [taste] \, etc.);
+#X text 391 330 EINGANG 9: Audiosignal 5;
+#X text 390 356 EINGANG 10: Steuert den Regler Lautstärke 5' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 391 400 EINGANG 11: Steuert den Regler 'Pan 5' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 391 436 EINGANG 12: Steuert den Schalter 'Kanal 5 an/aus' (0
+= aus \, 1 = an \, z.B. von [nummer] \, r[numrand] oder bang = an/aus
+\, z.B. von [bange] \, [steps] \, [taste] \, etc.);
+#X text 12 592 AUSGANG 1: Gibt den linke Kanal der Summe aus;
+#X text 13 620 AUSGANG 2: Gibt den rechten Kanal der Summe aus;
+#X text 838 357 Mit [mixer] können bis zu 5 Mono-Signale zu einem
+Stereosignal zusammengemischt werden.;
+#X text 838 397 Dabei kann mit 'vol' 1-5 die LAUTSTÄRKE jedes der
+5 Eingangssignale verändert werden;
+#X text 838 441 Mit 'pan' 1-5 werden die einzelnen Signale im STEREOBILD
+verteilt.;
+#X connect 3 0 16 0;
+#X connect 3 1 16 1;

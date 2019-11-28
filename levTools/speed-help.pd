@@ -1,0 +1,17 @@
+#N canvas 397 53 801 371 10;
+#X obj -1 -2 cnv 15 800 45 empty \$0-pddp.cnv.header speed 3 12 0 18
+-204280 -1 0;
+#X obj 16 162 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 18 55 EINGANG 1: Audiosignal \, das verarbeitet werden soll
+;
+#X obj 542 59 speed 1;
+#X text 18 89 EINGANG 2: Steuert die Tempo- und Tonhöhenveränderung
+(1 = 1/32 \, 2 = 1/16 \, 3 = 1/8 \, 4 = 1/4 \, 5 = 1/2 \, 6 = 1 \,
+7 = 2 \, 8 = 4 \, 9 = 8 \, 10 = 16 \, z.B. von [nummer]).;
+#X text 17 185 AUSGANG 1: Gibt das im Wiedergabetempo bzw. der Tonhöhe
+veränderte Signal aus.;
+#X text 10 25 Wiedergabetempo und Tonhöhe, f 116;
+#X text 426 324 [speed] beschleunigt oder verlangsamt den Sound und
+verändert dadurch die Tonhöhe. Das Modul verzögert das Signal um
+ca. eine Sekunde.;

@@ -1,0 +1,28 @@
+#N canvas 221 83 949 456 10;
+#X obj -1 -2 cnv 15 950 45 empty \$0-pddp.cnv.header spec 3 12 0 18
+-204280 -1 0;
+#X obj 17 103 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 10 25 Klänge sichtbar machen: Spektrum, f 116;
+#X obj 443 95 spec 1;
+#X text 18 68 EINGANG 1: Audiosignal \, das dargestellt werden soll.
+;
+#X text 18 126 AUSGANG 1: Gibt das visualisierte Signal unverändert
+aus.;
+#N canvas 0 0 450 300 sinus 0;
+#X obj 160 59 osc~;
+#X obj 160 14 loadbang;
+#X msg 160 33 6000;
+#X obj 160 97 outlet~;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X restore 412 55 pd sinus;
+#X text 507 312 [spec] visualisiert Klänge \, stellt sie also bildlich
+dar. Wird ein Signal angeschlossen \, dann wird es in seiner Frequenzzusammensetzung
+gezeigt. Das Spektrum zeigt also \, aus welchen Sinusschwingungen verschiedener
+Frequenz ein Klang besteht.;
+#X text 508 390 Mit dem Regler 'Zoom' kann senkrecht in das Bild gezoomt
+werden \, damit die einzelnen Schwingungen besser zu erkennen sind.
+;
+#X connect 6 0 3 0;

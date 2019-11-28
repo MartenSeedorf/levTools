@@ -1,0 +1,38 @@
+#N canvas 549 112 801 657 10;
+#X obj -2 0 cnv 15 800 45 empty \$0-pddp.cnv.header linie 3 12 0 18
+-204280 -1 0;
+#X obj 11 273 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 12 297 AUSGANG 1: Gibt die erzeugten Kontrolldaten aus.;
+#X text 11 26 einfache Modulation von Parametern, f 116;
+#X obj 409 81 linie 1;
+#X obj 623 67 start 1;
+#X floatatom 460 189 5 0 0 0 - - -, f 5;
+#X obj 433 225 wait;
+#X text 15 61 EINGANG 1: Löst die Linie aus \, wenn es einen Bang
+\, z.B. von [taste] \, [start] \, [steps] \, etc. ODER eine Note \,
+z.B. von [midiinput] \, etc. empfängt;
+#X text 15 129 EINGANG 2: Steuert den Regler 'Start' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 15 171 EINGANG 3: Steuert den Regler 'Time' (in Mididaten \,
+z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 15 215 EINGANG 4: Steuert den Regler 'End' (in Mididaten \,
+z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 417 383 Das Modul erzeugt automatische Bewegungen von Steuerdaten
+(im MIDIformat zwischen 0 und 127). Wird es an einen passenden Moduleingang
+angeschlossen \, so bewegt es automatisch einen Regler.;
+#X text 417 576 Wenn 'USE START' aktiviert wird \, dann startet die
+Bewegung beim angezeigten Startwert. Wenn 'use start' deaktiviert ist
+\, startet die Bewegung bei dem Wert \, der zuletzt durch 'end' erreicht
+wurde.;
+#X text 417 514 Die Bewegung passiert in Form einer Linie zwischem
+dem Start- und dem Endwert. Die Dauer der Bewegung kann über 'TIME'
+eingestellt werden.;
+#X text 417 453 Die Bewegung wird AUSGELÖST \, wenn am linken Eingang
+ein Bang \, z.B. [taste] \, [start] \, etc. oder eine Note \, z.B.
+von [midiinput] \, [sequenzer] \, etc. eingeht.;
+#X text 417 343 [linie] wird zur AUTOMATISCHEN STEUERUNG von Modulreglern
+eingesetzt.;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 1;

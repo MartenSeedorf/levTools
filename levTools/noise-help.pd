@@ -1,0 +1,17 @@
+#N canvas 526 89 799 306 10;
+#X obj -1 -2 cnv 15 800 45 empty \$0-pddp.cnv.header noise 3 12 0 18
+-204280 -1 0;
+#X obj 16 114 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 10 25 Rauschgenerator, f 116;
+#X obj 509 49 noise 1;
+#X text 427 261 Das Modul hat einen Eingang zur Kontrolle des Lautstärkereglers.
+Der Ausgang gibt das Rauschen aus.;
+#X text 426 194 [noise] erzeugt ein Rauschsignal. Dieses ist entweder
+sogenanntes 'weißes' odr 'pinkes' Rauschen. Diese Begriffe beschreiben
+die Klangfarbe des Rauschen. Pinkes Rauschen ist etwas weniger scharf
+in den Höhen.;
+#X text 18 55 EINGANG 1: Steuert über den Regler 'vol' die Lautstärke
+des Rauschens (in Mididaten \, z.B. von [modu] \, [modurand] \, [control]
+\, etc.);
+#X text 17 138 AUSGANG 1: Gibt das erzeugte Rauschsignal aus.;

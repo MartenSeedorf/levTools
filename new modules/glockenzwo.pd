@@ -1,4 +1,4 @@
-#N canvas 0 0 1423 798 10;
+#N canvas 0 20 1423 798 10;
 #X obj 101 102 cnv 15 265 210 empty empty glocken 12 191 0 20 -33289
 -262144 0;
 #X obj 266 124 vradio 17 1 0 4 \$0-waveform_VCO \$0waveform_VCO_in
@@ -10,9 +10,9 @@ Form -5 -10 0 11 -162280 -260097 -262144 0;
 #X obj 190 252 nbx 4 14 -1e+037 1e+037 0 0 empty \$0attshow empty 0
 -8 0 11 -99865 -260097 -260097 1 256 0;
 #X obj 289 237 hsl 50 15 0 127 0 0 \$0rel \$0rel_r Release/Decay -10
--8 0 10 -162280 -260097 -262144 2450 1;
+-8 0 10 -162280 -260097 -262144 4900 1;
 #X obj 286 253 nbx 4 14 -1e+037 1e+037 0 0 empty \$0relshow empty 0
--8 0 11 -99865 -260097 -260097 508 256 0;
+-8 0 11 -99865 -260097 -260097 1016 256 0;
 #X obj 244 277 nbx 4 14 -1e+037 1e+037 0 0 empty \$0susshow empty 0
 -8 0 11 -99865 -260097 -260097 0.15748 256 0;
 #X obj 137 122 vsl 15 70 0.127 127 0 0 \$0Freq \$0Freq_r Frequenz -30
@@ -1545,6 +1545,7 @@ empty 0 -8 0 11 -99865 -260097 -260097 0 256 0;
 #X obj 149 -99 s \$0glideshow;
 #X msg 917 -22 63.5;
 #X msg 854 -22 0.125;
+#X obj 1854 -230 clip 1 110;
 #X connect 10 0 35 0;
 #X connect 10 0 125 0;
 #X connect 10 0 133 0;
@@ -1588,7 +1589,7 @@ empty 0 -8 0 11 -99865 -260097 -260097 0 256 0;
 #X connect 44 0 46 0;
 #X connect 45 0 42 1;
 #X connect 45 0 43 1;
-#X connect 45 0 47 1;
+#X connect 45 0 156 0;
 #X connect 46 0 45 0;
 #X connect 47 0 42 0;
 #X connect 48 0 146 4;
@@ -1696,4 +1697,5 @@ empty 0 -8 0 11 -99865 -260097 -260097 0 256 0;
 #X connect 152 0 153 0;
 #X connect 154 0 15 0;
 #X connect 155 0 14 0;
+#X connect 156 0 47 1;
 #X coords 0 -1 1 1 267 214 1 100 100;

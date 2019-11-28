@@ -1,0 +1,90 @@
+#N canvas 183 90 921 575 10;
+#X obj -2 0 cnv 15 920 45 empty \$0-pddp.cnv.header velocity 3 12 0
+18 -204280 -1 0;
+#X obj 415 160 velocity 1;
+#X obj 538 99 osci 1;
+#X floatatom 415 264 5 0 0 0 - - -, f 5;
+#X obj 437 326 output 21;
+#X obj 415 58 bng 25 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 447 58 bng 25 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 479 58 bng 25 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 486 269 450 300 tone 0;
+#X obj 185 10 inlet;
+#X obj 238 10 inlet;
+#X obj 296 10 inlet;
+#X obj 106 75 unpack 0 0;
+#X floatatom 102 102 5 0 0 0 - - -, f 5;
+#X floatatom 138 102 5 0 0 0 - - -, f 5;
+#X obj 238 141 outlet;
+#X msg 238 55 493.8 55;
+#X obj 369 89 del 300;
+#X obj 379 111 del 300;
+#X obj 401 132 del 300;
+#X msg 325 177 440 0;
+#X msg 378 177 493.8 0;
+#X msg 436 177 554.3 0;
+#X msg 185 55 440 80;
+#X msg 296 55 554.3 127;
+#X connect 0 0 14 0;
+#X connect 0 0 8 0;
+#X connect 1 0 7 0;
+#X connect 1 0 9 0;
+#X connect 2 0 15 0;
+#X connect 2 0 10 0;
+#X connect 3 0 4 0;
+#X connect 3 1 5 0;
+#X connect 7 0 3 0;
+#X connect 7 0 6 0;
+#X connect 8 0 11 0;
+#X connect 9 0 12 0;
+#X connect 10 0 13 0;
+#X connect 11 0 6 0;
+#X connect 12 0 6 0;
+#X connect 13 0 6 0;
+#X connect 14 0 3 0;
+#X connect 14 0 6 0;
+#X connect 15 0 3 0;
+#X connect 15 0 6 0;
+#X coords 0 -1 1 1 71 20 2 100 100;
+#X restore 415 108 pd tone;
+#X text 12 25 Lautstärke einer Note zur Kontrolle von Parametern nutzen
+, f 116;
+#X obj 7 203 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 507 62 HIER NOTEN SPIELEN;
+#X text 10 61 EINGANG 1: Noteninformationen von [sequenzer] \, [steps]
+\, [midiinput] \, [midikeyboard] \, etc.;
+#X text 10 101 EINGANG 2: Steuert den Regler 'übergang' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 10 140 EINGANG 2: Steuert den Regler 'velocity' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 8 226 AUSGANG 1: Gibt den Lautstärkewert der Note aus.;
+#X text 550 298 Mit [velocity] kann die Lautstärke von gespielten
+Noten genutzt werden \, um damit Regler in anderen Modulen zu steuern.
+Wird die 'velocity' also an einen passenden Moduleingang geschickt
+\, dann steuert sie den Regler.;
+#X text 550 496 Im Beispiel oben können drei Noten mit unterschiedlichen
+Lautstärkewerten ('velocity') gespielt werden. Über das Modul [velocity]
+werden die Lautstärkewerte genutzt \, um 'Sustain' und 'Release/Decay'
+im [osci] zu steuern.;
+#X text 550 445 Auf diesem Wege kann also die Stärke \, mit der eine
+Note gespielt wird \, genutzt werden \, um Eigenschaften der erzeugten
+Klänge zu verändern.;
+#X text 550 364 Der Regler 'übergang' steuert die Zeit \, in der von
+einem zum anderen Wert gegangen wird. Mit dem zweiten Regler 'velocity'
+kann die Intensität gesteuert werden \, mit der sich der Lautstärkewert
+auswirkt. Minuswerte kehren den Effekt hier um (hohe Lautstärke -->
+kleine Werte);
+#X connect 1 0 2 5;
+#X connect 1 0 3 0;
+#X connect 1 0 2 4;
+#X connect 2 0 4 0;
+#X connect 2 0 4 1;
+#X connect 5 0 8 0;
+#X connect 6 0 8 1;
+#X connect 7 0 8 2;
+#X connect 8 0 1 0;
+#X connect 8 0 2 0;

@@ -1,0 +1,52 @@
+#N canvas 142 23 801 695 10;
+#X obj 0 0 cnv 15 800 45 empty \$0-pddp.cnv.header delaynet 3 12 0
+18 -204280 -1 0;
+#X obj 17 328 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 19 51 EINGANG 1: Audiosignal \, das verarbeitet werden soll.
+;
+#X text 19 87 EINGANG 2: Steuert den Regler 'Feedback' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X obj 413 53 delaynet 1;
+#X text 18 129 EINGANG 3: Steuert den Regler 'Position' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 224 Eingang 5 bis 28 steuern wie Eingang 2/3/4 die Feedback/Position/On
+- Kontrollen der anderen Feedbackschleifen.;
+#X text 18 172 EINGANG 4: Steuert den Schalter 'on' (bangs \, z.B.
+von [banger] \, [taste] \, etc. oder 1/0);
+#X text 17 349 AUSGANG 1: Gibt das mit Echoeffekten versehene Signal
+aus.;
+#X text 20 283 EINGANG 4: Steuert den Schalter 'randomize!' (bangs
+\, z.B. von [banger] \, [taste] \, etc.);
+#X text 26 413 [delaynet] ist ein Netzwerk aus 3 Delays \, deren Feedbackschleifen
+flexibel verschaltet werden können. Das eingehende Signal fließt
+nacheinander in drei Delayschleifen.;
+#X text 26 476 Der 1 'on'- Schalter links oben füttert das Delay der
+ersten Schleife zurück in den Eingang der ersten Schleife.;
+#X text 26 511 Der 2 'on'- Schalter links mitte füttert das Delay
+der ersten Schleife in den Eingang der zweiten Schleife.;
+#X text 26 546 Der 3 'on'- Schalter links unten füttert das Delay
+der ersten Schleife in den Eingang der dritten Schleife.;
+#X text 26 581 Der 4 'on'- Schalter in der Mitte füttert das Delay
+der zweiten Schleife in den Eingang der zweiten Schleife.;
+#X text 410 414 Für jede Schleife kann bestimmt werden \, wie stark
+(Feedback) und mit welcher Verzögerung (Position) das Signal zurückgeführt
+werden soll.;
+#X text 409 469 [delaynet] ist ein sehr starker \, schwer zu kontrollierender
+Effekt. Es entstehen schnell Feedbacks \, die sehr lang und laut sind.
+;
+#X text 25 651 Der 6 'on'- Schalter rechts unten füttert das Delay
+der dritten Schleife in den Eingang der dritten Schleife.;
+#X text 25 616 Der 5 'on'- Schalter in der Mitte unten füttert das
+Delay der zweiten Schleife in den Eingang der dritten Schleife.;
+#X text 409 520 Vor allem das (rot markierte) Feedback der Schleifen
+oben mitte (2-->1) \, oben rechts (3-->1) und mitte rechts (3-->2)
+lassen lässt extreme Feedbacks entstehen und sollte daher vorsichtig
+eingesetzt werden.;
+#X text 411 583 Generell kann [delaynet] eingesetzt werden \, um eingehende
+Signale stark zu verfremden und in Flächen zu verwandeln. Dafür reichen
+als Input häufig einzelne Schläge (Kicks \, Snares \, Hihats \, etc.)
+aus.;
+#X text 412 645 Mit dem Schalter 'randomize!' werden alle Parameter
+randomisiert \, sodass ein Delaynetzwerk entsteht.;
+#X text 10 25 Netzwerk aus Delays, f 116;

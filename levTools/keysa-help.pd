@@ -1,0 +1,43 @@
+#N canvas 38 129 949 566 10;
+#X obj -2 0 cnv 15 950 45 empty \$0-pddp.cnv.header keysa 3 12 0 18
+-204280 -1 0;
+#X obj 16 494 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 18 55 EINGANG 1: Tonhöhe in Hz (z.B. von [midiinput] \, [sequenzer]
+\, etc.);
+#X obj 447 63 keysa;
+#X text 10 25 tonal spielbarer Sampler, f 116;
+#X text 491 416 An den ersten Eingang links können Module wie [midiinput]
+\, [sequenzer] \, [loopmidi] angeschlossen werden \, damit Steuerdaten
+zur Tonhöhe empfangen werden. Am zweiten Eingang kann ein Audiosignal
+angeschlossen werden \, dass dann aufgenommen werden kann. Über die
+anderen Eingänge werden die Schalter und Regler angesteuert. Das Modul
+gibt bei Tastendruck das tonal gestimmte Sample aus.;
+#X text 17 92 EINGANG 2: Signal \, das mit 'Aufnahme' aufgenommen werden
+soll (z.B. von [input] \, [osci] \, etc.);
+#X text 16 133 EINGANG 3: Steuert den Schalter 'rückwärts' (0=aus
+\, 1=an \, bzw. bang für an/aus);
+#X text 16 182 EINGANG 4: Steuert den Regler 'Attack' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 216 EINGANG 5: Steuert den Regler 'Sustain' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 251 EINGANG 6: Steuert den Regler 'Release/Decay' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 17 334 EINGANG 8: Steuert den Regler 'Release/Decay' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 17 299 EINGANG 7: Steuert den Regler 'Start' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 491 274 [keysa] ist ein Sampler \, der mit einer Klaviatur
+tonal in 4 Stimmen gespielt werden kann. Der Sampler kann einen Sound
+von der Festplatte laden oder vom zweiten Eingang aufnehmen und diese
+Aufnahmen dann auf der Festplatte speichern. Das Sample kann mit 'Start'
+und 'Ende' in der Länge bearbeitet werden. Mit dem Tune-Regler kann
+das Sample gestimmt werden \, damit es harmonisch mit anderen gestimmten
+Instrumenten klingt. Schließlich kann die Hüllkurve des erzeugten
+Klangs eingestellt werden.;
+#X text 18 430 EINGANG 10: Steuert den Regler 'Tune' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 17 517 AUSGANG 1: Gibt die erzeugten Töne als Audiosignal
+aus.;
+#X text 18 384 EINGANG 9: Steuert den Schalter 'Aufnehmen' (0=aus \,
+1=an \, bzw. bang für an/aus);

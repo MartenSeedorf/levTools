@@ -1,0 +1,28 @@
+#N canvas 221 83 829 456 10;
+#X obj -1 -2 cnv 15 830 45 empty \$0-pddp.cnv.header signal 3 12 0
+18 -204280 -1 0;
+#X obj 17 103 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 18 68 EINGANG 1: Audiosignal \, das dargestellt werden soll.
+;
+#X text 18 126 AUSGANG 1: Gibt das visualisierte Signal unverändert
+aus.;
+#N canvas 193 282 450 323 sinus 0;
+#X obj 160 59 osc~;
+#X obj 160 14 loadbang;
+#X obj 160 97 outlet~;
+#X msg 160 33 400;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 3 0 0 0;
+#X restore 439 54 pd sinus;
+#X obj 463 85 signal 1;
+#X text 10 25 Klänge sichtbar machen: Schwingung, f 116;
+#X text 434 313 [signal] visualisiert Klänge \, stellt sie also bildlich
+dar. Wird ein Signal angeschlossen \, dann wird es als Schwingung dargestellt
+\, die auch als Zeitsignal bezeichnet wird. Alle Klänge sind Schwingungen
+und jeder Klang sieht in seinem Schwingungsverhalten anders aus.;
+#X text 435 393 Mit den 'Zoom' Reglern kann senkrecht und waagerecht
+in das Bild gezoomt werden \, damit die Schwingungen besser zu erkennen
+sind.;
+#X connect 4 0 5 0;

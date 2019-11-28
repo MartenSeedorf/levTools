@@ -1,0 +1,25 @@
+#N canvas 549 112 801 397 10;
+#X obj -2 0 cnv 15 800 45 empty \$0-pddp.cnv.header wait 3 12 0 18
+-204280 -1 0;
+#X obj 11 183 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X obj 620 53 start 1;
+#X obj 471 74 wait;
+#X obj 471 159 bng 68 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 11 26 verzögert eingehende Befehle, f 116;
+#X text 15 61 EINGANG 1: Empfängt Bangs \, z.B. von [taste] \, [banger]
+\, [start] \, etc. ODER Noteninformationen \, z.B. von [midiinput]
+\, ODER Steuerdaten \, z.B. von [modu] \, [linie] \, etc..;
+#X text 15 129 EINGANG 2: Steuert den Regler 'Dauer' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 15 210 AUSGANG 1: Gibt die Verzögerten Daten aus.;
+#X text 406 256 [wait] wird zur Verzögerung von Steuerdaten \, z.B.
+von Bangs \, Steuerdaten oder Noten eingesetzt.;
+#X text 407 299 Der Regler 'time' steuert die Dauer der Verzögerung.
+;
+#X text 407 331 Mit [wait] und [linie] können komplexe Abläufe erstellt
+werden \, die dann mit [start] ausgelöst werden. So kann ein ganzes
+Stück mit diesen drei Modulen strukuriert werden.;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
