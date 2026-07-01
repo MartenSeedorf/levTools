@@ -1,0 +1,20 @@
+#N canvas 540 269 396 300 10;
+#X obj 72 89 cnv 15 60 78 empty empty start 6 10 0 16 -66577 -260097
+0;
+#X obj 80 116 bng 41 250 50 0 empty empty empty 17 7 0 10 -228856 -260097
+-1;
+#X obj 78 200 outlet;
+#X obj 84 24 inlet;
+#X obj 172 78 unpack 0 0;
+#X obj 175 108 moses 0.1;
+#X obj 102 52 route bang stop;
+#X obj 175 133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 1 0 2 0;
+#X connect 3 0 6 0;
+#X connect 4 1 5 0;
+#X connect 5 0 7 0;
+#X connect 6 0 1 0;
+#X connect 6 2 4 0;
+#X connect 7 0 1 0;
+#X coords 0 -1 1 1 62 82 1 71 87;

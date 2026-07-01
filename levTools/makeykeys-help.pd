@@ -1,0 +1,27 @@
+#N canvas 196 12 800 524 10;
+#X obj -2 0 cnv 15 801 48 empty \$0-pddp.cnv.header makeykeys 3 12
+0 18 -204280 -1 0;
+#X obj 11 63 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 11 26 pentatonische Melodien mit dem Makey Makey spielen,
+f 116;
+#X obj 501 61 makeykeys 1;
+#X text 12 82 AUSGANG 1: Gibt Töne als Steuerdaten aus und muss an
+Klangerzeuger wie [osci] \, [add] \, [glocken] \, [grin] oder [keysa]
+angeschlossen werden.;
+#X text 415 242 [makeykeys] ist dazu gedacht \, Signale vom Makey Makey
+- Controller zu empfangen und in Steuerdaten für Töne umzuwandeln.
+;
+#X text 415 294 Für mehr Infos zum MAKEY MAKEY siehe auch das Hilfe-Patch
+von [makeymain].;
+#X text 415 428 Die ausgegebene TONLEITER ist pentatonisch \, das heisst
+sie besteht aus fünf Tönen pro Oktave. GRUNDTON und TONGESCHLECHT
+(Dur/Moll) können eingestellt werden.;
+#X text 415 484 Auch die TONHÖHE der ausgegebenen Töne kann unter
+'Oktave' eingestellt werden.;
+#X text 415 334 Wenn die Tasten a \, w \, s \, d \, f \, g gedrückt
+oder mit dem Makey Makey ausgelöst werden \, so gibt [makeykeys] Steuerdaten
+für Töne aus. Ganz als würden Tasten auf einem Klavier gedrückt
+werden. Damit tatsächlich Klänge entstehen \, muss [makeykeys] allerdings
+noch an Klangerzeuger wie [osci] \, [add] \, [glocken] \, [grin] oder
+[keysa] angeschlossen werden.;

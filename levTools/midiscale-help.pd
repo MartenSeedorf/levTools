@@ -1,0 +1,36 @@
+#N canvas 276 122 800 637 10;
+#X obj -2 0 cnv 15 800 45 empty \$0-pddp.cnv.header midiscale 3 12
+0 18 -204280 -1 0;
+#X obj 11 199 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X obj 507 239 midiscale 1;
+#X text 11 26 Veränderung von Midicontrollerdaten, f 116;
+#X obj 680 94 control 1;
+#X obj 416 61 modu 1;
+#X text 417 392 [midiscale] wird zur Veränderung von Mididaten eingesetzt.
+;
+#X text 15 107 EINGANG 2: Steuert den Regler 'low' (in Mididaten \,
+z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 15 149 EINGANG 3: Steuert den Regler 'high' (in Mididaten \,
+z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 15 61 EINGANG 1: Kontrolldaten (in Mididaten \, z.B. von [modu]
+\, [modurand] \, [control] \, etc.);
+#X text 15 223 AUSGANG 1: Gibt die veränderten Kontrolldaten aus.
+;
+#X text 418 419 Die eingehenden Kontrolldaten (in Midi \, von 0-127
+\, z.B. von [modu] \, [modurand] \, [control]) werden in ihrer Breite
+verkleinert oder vergrößert \, indem ihre obere und untere Grenze
+verschoben wird. Man nennt das 'Skalierung' von Daten.;
+#X text 418 497 So kann z.B. ein bestimmter Regler \, den man mit [control]
+oder [modu] steuern will \, nur in einem ganz bestimmten Bereich gesteuert
+werden;
+#X obj 619 276 volume 1;
+#X floatatom 507 351 5 0 0 0 - - -, f 5;
+#X text 418 552 Im Beispiel oben kann man die Funktion von [midiscale]
+ausprobieren. Verändere einfach den Regler 'low' und 'high' und beobachte
+\, wie der Bereich \, in dem der Volume-Regler bewegt wird \, sich
+verändert.;
+#X connect 2 0 13 1;
+#X connect 2 0 14 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;

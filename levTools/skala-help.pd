@@ -1,0 +1,21 @@
+#N canvas 183 90 799 291 10;
+#X obj -2 0 cnv 15 800 45 empty \$0-pddp.cnv.header skala 3 12 0 18
+-204280 -1 0;
+#X obj 15 184 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X obj 528 54 skala 1;
+#X text 16 60 EINGANG 1: Noteninformationen von [sequenzer] \, [midiinput]
+\, [midikeyboard] \, etc.;
+#X text 16 102 EINGANG 2: Steuert den Regler 'Grundton' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 142 EINGANG 3: Steuert den Schalter 'moll/dur' (0 = moll
+\, 1 = dur);
+#X text 395 236 Links oben werden [sequenzer] \, [midiinput] \, [midikeyboard]
+\, [loopmidi] \, etc. angeschlossen. Links unten werden angepassten
+Toninformationen ausgegeben.;
+#X text 10 25 Erzwingen einer Tonart, f 116;
+#X text 15 210 AUSGANG 1: Gibt an die Tonart angepassten Tonhöhen
+aus.;
+#X text 395 182 [skala] zwingt alle eingehenden Noten in eine bestimmte
+Tonart. Tonhöhen \, die nicht zu dieser Tonart gehören \, werden
+also korrigiert und in die Tonart verschoben.;

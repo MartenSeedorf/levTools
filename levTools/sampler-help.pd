@@ -1,0 +1,42 @@
+#N canvas 258 80 900 569 10;
+#X obj -2 0 cnv 15 900 45 empty \$0-pddp.cnv.header sampler 3 12 0
+18 -204280 -1 0;
+#X obj 17 509 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 15 107 EINGANG 2: Signal \, das mit 'Aufnahme' aufgenommen
+werden soll (z.B. von [input] \, [osci] \, etc.);
+#X text 16 259 EINGANG 5: Steuert den Schalter 'rückwärts' (0=aus
+\, 1=an \, bzw. bang für an/aus \, z.B. [taste] \, [banger] \, etc.).
+;
+#X text 468 447 Der erste Eingang links kann \, z.B. von [steps] \,
+Abspielbefehle erhalten. Am zweiten Eingang kann ein Audiosignal angeschlossen
+werden \, dass dann aufgenommen werden kann. Über die anderen Eingänge
+werden die Schalter und Regler angesteuert. Das Modul gibt das abgespielte
+Sample aus.;
+#X text 11 26 Samples aufnehmen und abspielen, f 116;
+#X text 14 61 EINGANG 1: Steuerdaten zum Ausgabe des Samples (z.B.
+von [steps] \, [sequenzer] \, [pad] \, oder [taste]);
+#X text 16 157 EINGANG 3: Steuert den Schalter 'Loop' (0=aus \, 1=an
+\, bzw. bang für an/aus \, z.B. [taste] \, [banger] \, etc.).;
+#X text 16 207 EINGANG 4: Steuert den Regler 'Speed' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 319 EINGANG 6: Steuert den Regler 'Start' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 354 EINGANG 7: Steuert den Regler 'Ende' (in Mididaten \,
+z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 19 459 EINGANG 9: Steuert den Schalter 'Aufnehmen' (0=aus \,
+1=an \, bzw. bang für an/aus \, z.B. [taste] \, [banger] \, etc.).
+;
+#X text 19 410 EINGANG 8: Steuert den Button 'neustart' (bang zum Auslösen
+\, z.B. von [taste] \, [banger] \, etc.).;
+#X text 18 533 AUSGANG 1: Gibt das Sample aus.;
+#X text 465 283 Mit dem [sampler] können Sounddateien vom Computer
+geladen werden. Diese können dann in der Länge bearbeitet ('Start'
+und 'Ende') und mit wählbahrer Geschwindigkeit ('Speed') abgespielt
+werden (auch 'rückwärts') Außerdem kann der Sampler den Sound vom
+zweiten Eingang aufnehmen und diese Aufnahmen auf der Festplatte speichern.
+;
+#X text 466 384 Das Sample kann entweder in einer Schleife immer wieder
+abgegeben werden ('Loop') oder einmalig bis zum Ende gespielt werden
+('Abspielen');
+#X obj 415 63 sampler;

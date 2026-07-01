@@ -1,0 +1,70 @@
+#N canvas 105 118 1179 631 10;
+#X obj 0 0 cnv 15 1178 45 empty \$0-pddp.cnv.header oscidrone 15 8
+0 18 #c4dcdc #000000 0;
+#X obj 16 557 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+#dcdcdc #000000 0;
+#X text 17 580 AUSGANG 1: Gibt die erzeugte Schwingung als Audiosignal
+aus.;
+#X text 422 297 Das Modul hat einen Eingang für die Steuerdaten. Über
+die anderen Eingänge können die Regler mit Midibefehlen gesteuert
+werden. Der Ausgang gibt das erzeugte Audiosignal aus.;
+#X text 18 55 EINGANG 1: Noteninformationen (z.B. von [midiinput] \,
+[sequenzer] \, etc.);
+#X text 37 24 erweiterter Oscillator mit Frequenzmodulation, f 116
+;
+#X text 18 102 EINGANG 2: Audiosignal für die Frequenzmodulation.
+;
+#X text 18 135 EINGANG 3: Der Schalter 'Ton' wird ausgelöst (z.B.
+von [taste] \, [banger] \, [pad] \, etc.);
+#X text 18 177 EINGANG 4: Steuert den Regler 'Frequenz' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 230 EINGANG 5: Steuert den Regler 'Attack' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 17 265 EINGANG 6: Steuert den Regler 'Sustain' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 299 EINGANG 7: Steuert den Regler 'Release/Decay' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 350 EINGANG 8: Steuert den Regler 'width' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 407 EINGANG 9: Steuert den Regler 'detune' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 461 EINGANG 10: Steuert den Regler 'glide' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 516 EINGANG 11: Steuert den Regler 'FM-int' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 423 360 Auch ohne eingehende Steuerdaten kann ein Ton ausgelöst
+('Ton') und in seiner Tonhöhe ('Frequenz') verändert werden.;
+#X text 422 399 'Form' bestimmt die Klangfarbe des erzeugten Sounds
+mit den Optionen sin = Sinus \, rec = Rechteck \, saw = Sähezahn \,
+tri = Dreieck \, pls = Puls. 'Width' steuert die Pulsbreite des Puls
+und damit seine Klangfarbe.;
+#X text 423 469 'attack' \, 'sustain' 'release/decay' steuern die Lautstärkehüllkurve
+des Klangs. 'attack' bestimmt die Einschwingphase \, also wie lange
+der Klang braucht \, um von der Stille seinen lautesten Punkt zu erreichen.
+'Sustain' bestimmt die Lautstärke des Klangs \, wenn er gehalten wird.
+Nach der Einschwingphase ('attack') geht die Lautstärke in der Abklingzeit
+('decay') auf die 'sustain'- Lautstärke. Diese ist immer relativ zur
+maximalen Lautstärke. Die Ausschwingzeit ('release') ist die Zeit
+\, in der die Lautstärke wieder auf Null fällt \, nachdem der Klang
+deaktiviert wurde.;
+#X text 807 247 Der Oscillator ist auf 440 Hz gestimmt. Mit 'detune'
+kann er verstimmt werden.;
+#X text 807 341 Mit 'Glide' wird die Übergangszeit von einer Tonhöhe
+zur nächsten bestimmt. Wenn hier höhere Werte eingestellt sind \,
+dann gleiten die Tonhöhen ineinander.;
+#X text 807 294 'FM-int' steuert die Intensität der Frequenzmodulation
+durch das Modulationssignal \, das an Eingang 2 anliegt.;
+#X text 807 399 'Mono/poly' bestimmt \, ob der Oscillator mehrstimmig
+(vierstimmig) oder einstimmig arbeitet. Wenn er mehrstimmig ist \,
+können bis zu 4 Töne gleichzeitig erzeugt werden. Ist er einstimmig
+\, kann immer nur ein Ton erzeugt werden.;
+#X obj 430 55 oscidrone 1;
+#X text 422 247 [oscidrone] ist ein Oscillatormodul. Es erzeugt Klänge
+in unterschiedlichen Klangfarben. Dafür braucht es Steuerdaten vom
+[sequenzer] \, von [midiinput] oder [loopmidi].;
+#X text 804 532 [oscidrone] ist eine erweiterte Version von [osci}
+bzw. [oscizwo]. Für 'attack' \, 'sustain' und 'release/decay' können
+deutlich höhere Werte eingegeben werden. Mit einem Audiosignal an
+Eingang 2 kann Frequenzmodulation gesteuert werden. Außerdem kann
+zwischen Ein- und Mehrstimmigkeit ausgewählt werden ('mono/poly').
+;

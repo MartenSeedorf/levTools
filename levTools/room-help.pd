@@ -1,0 +1,36 @@
+#N canvas 370 177 801 617 10;
+#X obj 0 0 cnv 15 800 45 empty \$0-pddp.cnv.header room 3 12 0 18 -204280
+-1 0;
+#X obj 17 216 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 19 51 EINGANG 1: Audiosignal \, das verarbeitet werden soll.
+;
+#X text 10 25 Halleffekt, f 116;
+#X obj 517 55 room 1;
+#X text 421 278 [room] ist ein Modul \, das einen künstlichen Klangraum
+erzeugt.;
+#X text 417 562 Man kann mit der richtigen Software aber Räume im
+Computer künstlich nachstellen. Dafür dienen Module wie [room] und
+[verb].;
+#X text 416 473 Jeder Klang \, den wir im normalen Alltag wahrnehmen
+\, hören wir in einem Raum mit vielen \, sehr kurzen Echos. Diese
+Reflektionen nehmen wir als den Klang des Raums wahr. Elektronische
+Klänge haben vor der Ausgabe aus den Lautsprechern keinen Raum und
+können daher gerade bei der Ausgabe über Kopfhörer oft unnatürlich
+und tot klingen.;
+#X text 19 87 EINGANG 2: Steuert den Regler 'dry/wet' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 125 EINGANG 3: Steuert den Regler 'size' (in Mididaten \,
+z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 167 EINGANG 4: Steuert den Regler 'damp' (in Mididaten \,
+z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 17 237 AUSGANG 1: Gibt das mit Halleffekt versehene Signal
+aus.;
+#X text 419 320 'dry/wet' steuert den Anteil des Raumklangs im Ausgangssignal.
+'size' steuert die Größe des künstlichen Raums. 'damp' steuert den
+Klangcharakter des Raums \, genau genommen seine Fähigkeit zur Absorption
+von Schall. Je höher 'damp' \, desto stärker werde hörer Frequenzen
+im künstlichen Raum geschluckt. Mit 'freeze' kann die Hallfahne \,
+die durch den künstlichen Raum entsteht \, eingefroren werden. Sie
+wird dann nicht mehr vom einkommenden Signal beeinflusst.;
+#X text 402 453 WARUM RAUMKLANG?;

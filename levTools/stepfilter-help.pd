@@ -1,0 +1,42 @@
+#N canvas 328 75 799 694 10;
+#X obj 0 0 cnv 15 800 45 empty \$0-pddp.cnv.header stepfilter 3 12
+0 18 -204280 -1 0;
+#X obj 17 311 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 17 65 EINGANG 1: Audiosignal \, das verarbeitet werden soll.
+;
+#X text 17 336 AUSGANG 1: Gibt das gefilterte Signal aus.;
+#X text 410 429 - tiefe Frequenzen passieren und hohe werden abgesenkt
+(Tiefpass);
+#X text 410 461 - hohe Frequenzen passieren und tiefe werden abgesenkt
+(Hochpass);
+#X text 412 494 - hohe und tiefe Frequenzen um eine Mittenfrequenz
+abgesenkt werden (Bandpass);
+#X text 409 533 Es kann die Grenz- bzw. Mittenfrequenz (Frequenz) eingestellt
+werden. Der Q-Wert steuert die sogenannte Flankensteilheit des Filters.
+Ein hoher Q-Wert sorgt für einen steilen \, starken Schnitt. Die gefilterten
+Frequenzen werden stark reduziert. Dabei wird allerdings der Klang
+an der Grenzfrequenz betont (Resonanz). Ein tiefer Q-Wert führt zu
+einem flachen \, weichen Schnitt. Hier werden die gefilterten Frequenzen
+weniger stark abgesengt.;
+#X text 10 25 Absenkung von hohen bzw. tiefen Klanganteilen, f 116
+;
+#X obj 498 56 stepfilter;
+#X text 17 139 EINGANG 3: Steuert den Regler 'Frequenz' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 17 182 EINGANG 4: Steuert den Regler 'Q' (in Mididaten \, z.B.
+von [modu] \, [modurand] \, [control] \, etc.);
+#X text 17 269 EINGANG 6: Steuert den Filtercharakteristik (1=Tiefpass
+\, 2=Bandpass \, 3=Hochpass);
+#X text 17 96 EINGANG 2: Eingang fuer Signale von [sequenzer] \, mit
+denen die 'Frequenz' gesteuert werden kann.;
+#X text 17 225 EINGANG 5: Steuert den Regler 'uebergangszeit' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 412 288 [stepfilter] ist ein Filter \, der mit einem Sequenzer
+gesteuert werden kann. So können rhythmische Filterbewegungen erzeugt
+werden.;
+#X text 412 356 Das Modul ist aehnlich wie [filter] ein einfacher Audiofilter
+\, der Klanganteile (Frequenzen) über und unter einer bestimmten Grenzfrequenz
+absenkt. Je nach eingestellter Charakteristik können;
+#X text 409 658 Die 'Uebergangszeit' regelt die Geschwindigkeit der
+Sprünge der Frequenz.;

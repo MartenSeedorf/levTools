@@ -1,0 +1,66 @@
+#N canvas 244 23 881 756 10;
+#X obj 0 0 cnv 15 880 45 empty \$0-pddp.cnv.header presets 3 12 0 18
+-204280 -1 0;
+#X obj 601 62 presets;
+#X text 8 26 Speichern und Laden aller Einstellungen im Patch, f 116
+;
+#X text 497 660 Tipp: Für eine bessere Übersicht oder für Notizen
+aller Art können Kommentare ins Patch geschrieben werden. Dafür geht
+man im Menü auf 'Einfügen' - Kommentar (Tastenkombi: Strg + 5). Es
+wird dann ganz ähnlich wie bei den Objekten ein Textkommentar im Patch
+angelegt. Klickt man diesen an \, kann man diesen Text frei bearbeiten.
+;
+#X text 494 224 Damit es alles speichern kann \, müssen alle Module
+mit einer EIGENEN HAUSNUMMER erzeugt worden sein (Beispiel: [input
+1] \, [volume 2] \, usw.).;
+#X text 495 178 Das Modul [presets] dient dann zum SPEICHERN und LADEN
+aller Einstellungen \, Sequenzen und Samples in einem Patch.;
+#X text 497 452 In einigen Modulen können Samples \, Sequenzen \,
+etc. auch einzeln gespeichert werden \, z.B. um sie in anderen Patches
+zu laden und zu verwenden.;
+#X text 497 390 Um das Presets wieder zu laden \, muss diese Hauptdatei
+mit 'load' geöffnet werden.;
+#X text 495 283 Jedes Preset sollte mit einem deutlichen Namen in einem
+NEUEN ORDNER gespeichert werden \, da dort beim Speichern in der Regel
+viele Dateien erzeugt werden. Für jede Sequenz \, jedes Sample \,
+etc. wird eine eigene Datei erzeugt.;
+#X text 496 358 Die Hauptdatei trägt dann den beim Speichern eingegebenen
+Namen.;
+#X text 497 537 Leider können die Verknüpfungen mit den Dateien NICHT
+MIT KOPIERT werden. Wenn der Ordner also verschoben wird \, z.B. auf
+einen anderen Computer \, dann müssen alle Samples und Sequenzbänke
+einmal manuell neu in die Module geladen werden. Wird dann an diesem
+neuen Ort über [presets] wieder ein Hauptdatei gespeichert \, so werden
+alle Verknüpfungen wieder mit gespeichert und beim nächsten Mal wird
+alles wieder automatisch geladen.;
+#X text 32 62 Mit [presets] können alle Regler- und Schaltereinstellungen
+\, Aufnahmen \, Samples \, Sequenzerbänke in einem Patch in einer
+Datei auf der Festplatte gespeichert werden.;
+#X text 36 304 KURZANLEITUNG SPEICHERN;
+#X text 36 332 - Irgendwo auf dem Computer einen neuen Ordner anlegen.
+;
+#X text 34 409 - Im Preset Modul auf 'save' klicken.;
+#X text 34 430 - In dem Speicherdialog zum Ordner navigieren \, in
+dem das Patch gespeichert ist.;
+#X text 34 464 - Hier einen neuen Ordner für das Preset anlegen.;
+#X text 36 485 - Einen markanten Dateinamen eingeben und auf 'speichern'
+klicken. (Es werden nun je nach Patch diverse Dateien im Ordner erzeugt
+\, in denen die verwendeten Samples und Aufnahmen \, Sequenzerbänke
+\, etc. gespeichert sind);
+#X text 37 585 KURZANLEITUNG LADEN;
+#X text 35 353 - In diesen Ordner mit 'Datei - speichern' in PD das
+Patch als .pd-Datei speichern. Damit ist das Patch \, also die Zusammenstellung
+an Modulen gespeichert.;
+#X text 61 138 WICHTIGE HINWEISE:;
+#X text 81 160 - damit das Speichern der Presets funktioniert \, muss
+jedes Modul gleicher Art unterschiedlich nummeriert sein. Sind z.B.
+zwei [room] - Module im Patch \, muss das eine mit [room 1] erzeugt
+sein \, das andere mit [room 2].;
+#X text 82 231 - Jedes Preset sollte in einem neuen Ordner gespeichert
+werden \, da viele Dateien erzeugt werden;
+#X text 41 637 - Im [presets] - Modul auf 'load' klicken.;
+#X text 42 612 - das .pd-Patch öffnen (z.B. unter 'Datei - öffnen'
+in PD).;
+#X text 41 663 - Eine Datei laden \, die vorher abgespeichert wurde.
+Dabei darauf achten \, dass die Hauptdatei geladen wird und keine Sequenzer-
+oder Sampledatei.;
