@@ -1,0 +1,15 @@
+#N canvas 341 312 801 249 10;
+#X obj 0 0 cnv 15 800 45 empty \$0-pddp.cnv.header input 3 12 0 18
+-204280 -1 0;
+#X obj 17 110 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 10 25 Audioeingang, f 116;
+#X obj 547 52 input;
+#X text 20 56 EINGANG 1: Steuert den Regler (in Mididaten \, z.B. von
+[modu] \, [modurand] \, [control] \, etc.);
+#X text 17 135 AUSGANG 1: Gibt das vom Computermikrofon kommende Audiosignal
+aus.;
+#X text 417 162 [input] dient dazu \, Sound vom Mikrofon bzw. vom Mikrofoneingang
+des Computers aufzunehmen und auszugeben. Die Anzeige rechts oben blinkt
+rot \, wenn das einkommende Signal übersteuert (d.h. es ist zu laut
+ist und wird daher verzerrt).;

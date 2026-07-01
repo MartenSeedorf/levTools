@@ -1,0 +1,19 @@
+#N canvas 416 137 801 257 10;
+#X obj 0 0 cnv 15 800 45 empty \$0-pddp.cnv.header crush 3 12 0 18
+-204280 -1 0;
+#X obj 18 163 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X obj 542 59 crush 1;
+#X text 19 87 EINGANG 2: Steuert den (Haupt)regler 'crush' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 19 122 EINGANG 3: Der Schalter 'an/aus' wird ausgelöst (z.B.
+von [taste] \, [banger] \, [pad] \, etc.);
+#X text 18 51 EINGANG 1: Audiosignal \, das verarbeitet werden soll.
+;
+#X text 424 186 [crush] ist ein Bitcrusher. Das Modul verändert den
+Klang \, indem die Qualität (die Auflösung in der Lautstärke) reduziert
+wird. Mit diesem Effekt können sehr extreme \, laute \, verzerrte
+Klänge erzeugt werden.;
+#X text 10 25 mit Qualitätsverlust neue Klänge gewinnen, f 116;
+#X text 18 185 AUSGANG 1: Gibt das mit Crusheffekt versehene Signal
+aus.;

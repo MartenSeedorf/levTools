@@ -1,0 +1,33 @@
+#N canvas 328 75 801 560 10;
+#X obj 0 0 cnv 15 800 45 empty \$0-pddp.cnv.header filter 3 12 0 18
+-204280 -1 0;
+#X obj 17 235 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 19 51 EINGANG 1: Audiosignal \, das verarbeitet werden soll.
+;
+#X obj 498 56 filter 1;
+#X text 17 260 AUSGANG 1: Gibt das gefilterte Signal aus.;
+#X text 18 98 EINGANG 2: Steuert den Regler 'Frequenz' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 18 141 EINGANG 3: Steuert den Regler 'Q' (in Mididaten \, z.B.
+von [modu] \, [modurand] \, [control] \, etc.);
+#X text 409 281 [filter] ist ein einfacher Audiofilter \, der Klanganteile
+(Frequenzen) über und unter einer bestimmten Grenzfrequenz absenkt.
+Je nach eingestellter Charakteristik können;
+#X text 400 330 - tiefe Frequenzen passieren und hohe werden abgesenkt
+(Tiefpass);
+#X text 400 362 - hohe Frequenzen passieren und tiefe werden abgesenkt
+(Hochpass);
+#X text 402 395 - hohe und tiefe Frequenzen um eine Mittenfrequenz
+abgesenkt werden (Bandpass);
+#X text 399 434 Es kann die Grenz- bzw. Mittenfrequenz (Frequenz) eingestellt
+werden. Der Q-Wert steuert die sogenannte Flankensteilheit des Filters.
+Ein hoher Q-Wert sorgt für einen steilen \, starken Schnitt. Die gefilterten
+Frequenzen werden stark reduziert. Dabei wird allerdings der Klang
+an der Grenzfrequenz betont (Resonanz). Ein tiefer Q-Wert führt zu
+einem flachen \, weichen Schnitt. Hier werden die gefilterten Frequenzen
+weniger stark abgesengt.;
+#X text 10 25 Absenkung von hohen bzw. tiefen Klanganteilen, f 116
+;
+#X text 18 182 EINGANG 4: Steuert den Filtercharakteristik (1=Tiefpass
+\, 2=Bandpass \, 3=Hochpass);
