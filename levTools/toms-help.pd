@@ -1,0 +1,26 @@
+#N canvas 327 246 801 393 10;
+#X obj 0 0 cnv 15 800 45 empty \$0-pddp.cnv.header toms 3 12 0 18 -204280
+-1 0;
+#X obj 15 324 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 16 99 EINGANG 2: Steuert den Regler 'tune' (in Mididaten \,
+z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 134 EINGANG 3: Steuert den Regler 'kick' (in Mididaten \,
+z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 228 EINGANG 5: Steuert den Regler 'attack' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 263 EINGANG 6: Steuert den Regler 'decay' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 182 EINGANG 4: Steuert den Regler 'dauer' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 9 26 elektronische Tom, f 116;
+#X obj 520 60 toms;
+#X text 16 55 EINGANG 1: Steuerdaten zum Auslösen der Tom (z.B. von
+[steps] \, [sequenzer] \, [pad] \, oder [taste]);
+#X text 414 293 [toms] erzeugte eine elektronische Tomtom. Diese kann
+mit 'tune' in ihrer Tonhöhe gestimmt werden. 'kick' regelt die Höhe
+und Stärke des Kicks am Anfang des Sounds \, wenn die Trommel "geschlagen"
+wird. Auch 'dauer' verändert den Klang der Drum. Höhere Werte klingen
+fetter \, träger. 'attack' und 'decay' steuern das Ein- und Ausschwingverhalten
+der Tomtom.;
+#X text 16 346 AUSGANG 1: Gibt das erzeugte Tom-Signal aus.;
