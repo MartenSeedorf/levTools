@@ -1,17 +1,18 @@
 # levTools
 
-current Version is 1.3.1
+current Version is 1.3.2
 
 1. Abstract
 
 The levTools are a set of abstractions for Pure Data. They are primarily designed for teaching electronic music. Moreover they have a huge potential for experienced pd-users or computer musicians in general. The levTools are optimized for purr data (or pd-l2ork), but can be used in pure data vanilla as well, given the needed externals are installed. The levTools are free and open source. They were first developed by Marten Seedorf in the context of the Berlin based lev–project, an educational project focussing on electronic music culture.
 
 
-  1.2. To Do
+  1.2. To Do (010726)
 
 - translation to english (so far all the texts are in german)
 - integrate the new modules to the levTools by adding help-patches to these modules
 - create new modules
+- [looper] module has been updated (shift-funcion). Its picture in the manual needs to be updated, maybe also the info 
 
 
 
