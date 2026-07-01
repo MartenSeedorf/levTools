@@ -1,0 +1,31 @@
+#N canvas 125 68 791 461 10;
+#X obj 507 49 osc;
+#X obj -2 0 cnv 15 792 42 empty \$0-pddp.cnv.header osc 3 12 0 18 -204280
+-1 0;
+#X obj 15 281 cnv 3 363 5 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 17 55 EINGANG 1: Tonhöhe in Hz (z.B. von [midiinput] \, [sequenzer]
+\, etc.);
+#X text 16 98 EINGANG 2: Der Schalter 'Ton' wird ausgelöst (z.B. von
+[taste] \, [banger] \, [pad] \, etc.);
+#X text 15 142 EINGANG 3: Steuert den Regler 'Frequenz' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 15 189 EINGANG 4: Steuert den Regler 'Width' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 15 233 EINGANG 5: Steuert den Regler 'detune' (in Mididaten
+\, z.B. von [modu] \, [modurand] \, [control] \, etc.);
+#X text 16 303 AUSGANG 1: Gibt die erzeugte Schwingung als Audiosignal
+aus.;
+#X text 9 23 ein einfacher oscillator ohne adsr-Hüllkurve;
+#X text 414 238 Das osc-Modul erzeugt unterschiedliche Schwingungen
+mit einer bestimmten Tonhöhe.;
+#X text 411 275 [osc] ist ein Modul \, mit dem ähnlich wie mit [osci]
+\, [shape] \, usw. Töne erzeugt werden können. Im Unterschied zu
+[osci] \, uws. haben die erzeugten Töne keine Tonhöhehüllkurve \,
+d.h. sie erklingen durchgehend.;
+#X text 411 345 [osc] empfängt am linken Eingang Steuerdaten für
+die Töne (z.B. von [midiinput] oder [sequenzer]). Links unten gibt
+es sein Audiosignal aus.;
+#X text 410 404 Auch ohne eingehende Steuerdaten kann ein Ton ausgelöst
+und in seiner Tonhöhe verändert werden. Schließlich kann dieser
+Ton gegen andere Klänge verstimmt werden.;

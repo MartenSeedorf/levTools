@@ -1,0 +1,21 @@
+#N canvas 452 59 703 817 10;
+#X obj 102 103 cnv 15 80 35 empty empty levtomidi 2 14 0 14 -199729
+-1 0;
+#X obj -152 312 outlet;
+#X obj -187 -246 inlet;
+#X obj -223 254 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg -224 284 stop 0;
+#X obj -187 -214 route stop;
+#X obj -104 47 unpack f f;
+#X obj -105 106 ftom;
+#X obj -103 179 pack f f;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 5 0 3 0;
+#X connect 5 1 6 0;
+#X connect 6 0 7 0;
+#X connect 6 1 8 1;
+#X connect 7 0 8 0;
+#X connect 8 0 1 0;
+#X coords 0 -1 1 1 84 41 1 100 100;

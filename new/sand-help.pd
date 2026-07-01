@@ -1,0 +1,50 @@
+#N canvas 0 0 1600 801 12;
+#X obj 660 310 sand;
+#X obj 2 1 cnv 15 3400 63 empty \$0-pddp.cnv.header sand 3 12 0 18
+#fc8000 #000000 0;
+#X text 49 120 !!! ZOOM IN & OUT FOR BETTER NAVIGATION !!!;
+#X text 44 27 granular delay, f 116;
+#X obj 35 560 cnv 1 746 1 empty empty reverb 7 -7 0 9 #fc8000 #000000
+0;
+#X obj 220 447 cnv 1 480 1 empty empty wet 1 -8 0 9 #fc8000 #000000
+0;
+#X text 290 180 sand is a granular delay. It is equipped with a reverb
+section \, which makes it well suited for drony ambient sounds. Every
+grain can be fed back into the initial delayline (reswallowed) for
+interesting results.;
+#X text 35 638 Based on pd-vanillas rev2 - patch.;
+#X text 35 562 Adjust the level of the reverb signal \, the intensity
+of reverberation (life) and a crossover sequence (x-over) from which
+the reverberation is dampended by a given factor (damp).;
+#X obj 1025 629 cnv 1 1 180 empty empty grain -13 183 0 9 #fc8000 #000000
+0;
+#X text 1050 736 The WINDOW determines the size of the cutout in ms.
+;
+#X text 1050 762 The DENSITY determines the probability of a silent
+read-cycle. At 100% each read-cycle produces a grain.;
+#X text 1050 849 The grains can be PITCHed by octaves and fine-tuning.
+;
+#X text 1050 690 4 tapeheads cut "grains" from the delayline in which
+the signal is fed.;
+#X text 1050 877 The grains can be DELAYed and fed back into the delayline
+for an echo effect.;
+#X text 1050 919 The output of each grain-module can be fed back into
+sand's input \, in other words "RESWALLOW"ed. That means that the output
+of one grain-module will become the input of all 4 modules. This feedback
+can lead to strong and interesting results.;
+#X obj 1624 315 cnv 1 600 1 empty empty modulation\\\ inputs 504 -8
+0 9 #fc8000 #000000 0;
+#X text 1806 321 All of sand's parameters can be modulated using these
+inputs. All of the inputs take numbers from 0-127 (MIDI) \, except
+for 'oct.' \, which takes integer number from -3 to 4;
+#X text 220 449 The ratio of the processed signal and the original
+signal at the input. This does not affect the Reverb.;
+#X obj 706 551 cnv 1 1 180 empty empty save/load -24 184 0 9 #fc8000
+#000000 0;
+#X text 270 700 You can save and load presets. All Parameters will
+be saved.;
+#X text 270 730 If you use sand as part of the levtools (https://github.com/MartenSeedorf/levTools/)
+\, the save function of the presets-module will save sand's settings.
+;
+#X text 1050 805 The JITTER adds a moment of probability to the position
+of the tapehead. It will randomly jump within the given window.;
